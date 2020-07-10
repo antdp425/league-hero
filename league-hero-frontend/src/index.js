@@ -29,8 +29,8 @@ class League{
          container.appendChild(actionRow)
          container.appendChild(leagueRow)
 
-         actionRow.innerHTML += League.newLeagueButton()
-         League.newLeagueListener()
+         actionRow.innerHTML += this.newLeagueButton()
+         this.newLeagueListener()
 
          leagues.forEach(league => {
             let l = new League(league)
@@ -65,15 +65,10 @@ class League{
             <div class="form-group">
                <label for="exampleInputEmail1">Email address</label>
                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-               <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
             </div>
             <div class="form-group">
                <label for="exampleInputPassword1">Password</label>
                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-            </div>
-            <div class="form-check">
-               <input type="checkbox" class="form-check-input" id="exampleCheck1">
-               <label class="form-check-label" for="exampleCheck1">Check me out</label>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
          </form>
@@ -83,8 +78,36 @@ class League{
    static newLeagueListener(){
       let button = document.querySelector("#add-league")
       button.addEventListener("click", () => {
-         event.target.parentElement.innerHTML += League.newLeagueForm()
+         event.target.parentElement.innerHTML += this.newLeagueForm()
+         this.createLeagueListener()
       })
+   }
+
+   static createLeagueListener(){
+      let form = document.querySelector("form")
+      form.addEventListener("submit", () => {
+         event.preventDefault()
+         this.createLeague()
+      })
+   }
+
+   static createLeague(){
+      let form = event.target
+      let formData = {
+         email: form[0].value,
+         password: form[1].value
+      }
+      let configObj = {
+         method: "POST",
+         headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+          },
+          body: JSON.stringify(formData)
+      }
+
+      console.log(configObj)
+      // fetch(`${baseURL}/leagues`, configObj)
    }
 
 }
