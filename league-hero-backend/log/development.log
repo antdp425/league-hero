@@ -1868,3 +1868,204 @@ puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
 puma (4.3.5) lib/puma/server.rb:472:in `process_client'
 puma (4.3.5) lib/puma/server.rb:328:in `block in run'
 puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  [1m[36mLeague Load (0.2ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mLeague Load (0.3ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mLeague Load (0.2ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  [1m[36mLeague Load (0.2ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 3]]
+  [1m[36mLeague Load (0.2ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 4]]
+  [1m[36mLeague Load (0.2ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 3]]
+  [1m[36mLeague Load (0.2ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLeague Create (0.5ms)[0m  [1m[32mINSERT INTO "leagues" ("name", "league_format", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Copa del Rey"], ["league_format", "11v11"], ["created_at", "2020-07-10 19:07:17.030240"], ["updated_at", "2020-07-10 19:07:17.030240"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLeague Create (0.3ms)[0m  [1m[32mINSERT INTO "leagues" ("name", "league_format", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Bundesliga"], ["league_format", "11v11"], ["created_at", "2020-07-10 19:07:17.034785"], ["updated_at", "2020-07-10 19:07:17.034785"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLeague Create (0.3ms)[0m  [1m[32mINSERT INTO "leagues" ("name", "league_format", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Major League Soccer"], ["league_format", "11v11"], ["created_at", "2020-07-10 19:07:17.038604"], ["updated_at", "2020-07-10 19:07:17.038604"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mLeague Create (0.4ms)[0m  [1m[32mINSERT INTO "leagues" ("name", "league_format", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Bundesliga"], ["league_format", "11v11"], ["created_at", "2020-07-10 19:07:17.042425"], ["updated_at", "2020-07-10 19:07:17.042425"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mLeague Load (0.2ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mLeague Load (0.2ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 3]]
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 4]]
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 3]]
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 4]]
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 3]]
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 4]]
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 3]]
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 4]]
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 3]]
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 4]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mLeague Load (0.3ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 3]]
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 4]]
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 3]]
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 4]]
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 3]]
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 4]]
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 3]]
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 4]]
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 3]]
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 4]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTeam Create (0.8ms)[0m  [1m[32mINSERT INTO "teams" ("name", "email", "phone", "league_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Kansas Sons"], ["email", "santa_goodwin@mertz.name"], ["phone", "411.573.3177"], ["league_id", 1], ["created_at", "2020-07-10 19:12:58.082747"], ["updated_at", "2020-07-10 19:12:58.082747"]]
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mLeague Load (0.2ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTeam Create (0.4ms)[0m  [1m[32mINSERT INTO "teams" ("name", "email", "phone", "league_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "New York People"], ["email", "mikel@weimann.com"], ["phone", "1-124-973-6858"], ["league_id", 2], ["created_at", "2020-07-10 19:12:58.094237"], ["updated_at", "2020-07-10 19:12:58.094237"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTeam Create (0.4ms)[0m  [1m[32mINSERT INTO "teams" ("name", "email", "phone", "league_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Delaware Witches"], ["email", "ellsworth.will@jacobs.name"], ["phone", "759-791-9380"], ["league_id", 3], ["created_at", "2020-07-10 19:12:58.100998"], ["updated_at", "2020-07-10 19:12:58.100998"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 3]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTeam Create (0.3ms)[0m  [1m[32mINSERT INTO "teams" ("name", "email", "phone", "league_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Oklahoma Griffins"], ["email", "ali@larson.org"], ["phone", "(909) 733-8341"], ["league_id", 4], ["created_at", "2020-07-10 19:12:58.107745"], ["updated_at", "2020-07-10 19:12:58.107745"]]
+  [1m[35m (13.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 4]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTeam Create (0.3ms)[0m  [1m[32mINSERT INTO "teams" ("name", "email", "phone", "league_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "New Mexico Bears"], ["email", "carla_harber@boyer-hilpert.name"], ["phone", "1-998-513-9122"], ["league_id", 5], ["created_at", "2020-07-10 19:12:58.125724"], ["updated_at", "2020-07-10 19:12:58.125724"]]
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTeam Create (0.3ms)[0m  [1m[32mINSERT INTO "teams" ("name", "email", "phone", "league_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "New Jersey Gooses"], ["email", "cordell@armstrong.net"], ["phone", "701-964-9911"], ["league_id", 1], ["created_at", "2020-07-10 19:12:58.134343"], ["updated_at", "2020-07-10 19:12:58.134343"]]
+  [1m[35m (15.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTeam Create (0.3ms)[0m  [1m[32mINSERT INTO "teams" ("name", "email", "phone", "league_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Mississippi Buffalo"], ["email", "shayne_paucek@quitzon.co"], ["phone", "514-043-2448"], ["league_id", 2], ["created_at", "2020-07-10 19:12:58.155219"], ["updated_at", "2020-07-10 19:12:58.155219"]]
+  [1m[35m (15.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mLeague Load (0.2ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTeam Create (0.3ms)[0m  [1m[32mINSERT INTO "teams" ("name", "email", "phone", "league_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "North Carolina Lions"], ["email", "adan_rowe@feeney.name"], ["phone", "749-434-7348"], ["league_id", 3], ["created_at", "2020-07-10 19:12:58.176407"], ["updated_at", "2020-07-10 19:12:58.176407"]]
+  [1m[35m (15.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 3]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTeam Create (0.4ms)[0m  [1m[32mINSERT INTO "teams" ("name", "email", "phone", "league_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Virginia Goblins"], ["email", "loreta@kuhlman.org"], ["phone", "1-921-363-0276"], ["league_id", 4], ["created_at", "2020-07-10 19:12:58.196395"], ["updated_at", "2020-07-10 19:12:58.196395"]]
+  [1m[35m (15.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 4]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTeam Create (0.3ms)[0m  [1m[32mINSERT INTO "teams" ("name", "email", "phone", "league_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Missouri Spirits"], ["email", "marlon_lehner@king.io"], ["phone", "687.463.0882"], ["league_id", 5], ["created_at", "2020-07-10 19:12:58.217633"], ["updated_at", "2020-07-10 19:12:58.217633"]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTeam Create (0.3ms)[0m  [1m[32mINSERT INTO "teams" ("name", "email", "phone", "league_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Arkansas Oxen"], ["email", "mose@kerluke.io"], ["phone", "1-839-271-9528"], ["league_id", 1], ["created_at", "2020-07-10 19:12:58.225406"], ["updated_at", "2020-07-10 19:12:58.225406"]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTeam Create (0.3ms)[0m  [1m[32mINSERT INTO "teams" ("name", "email", "phone", "league_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Wisconsin Bees"], ["email", "mohamed.feil@green-farrell.io"], ["phone", "(355) 009-4554"], ["league_id", 2], ["created_at", "2020-07-10 19:12:58.234328"], ["updated_at", "2020-07-10 19:12:58.234328"]]
+  [1m[35m (15.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mLeague Load (0.2ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTeam Create (0.3ms)[0m  [1m[32mINSERT INTO "teams" ("name", "email", "phone", "league_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Virginia Nemesis"], ["email", "jerry@aufderhar-haley.io"], ["phone", "614-477-2961"], ["league_id", 3], ["created_at", "2020-07-10 19:12:58.255413"], ["updated_at", "2020-07-10 19:12:58.255413"]]
+  [1m[35m (15.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 3]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTeam Create (0.3ms)[0m  [1m[32mINSERT INTO "teams" ("name", "email", "phone", "league_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Texas Owls"], ["email", "hannelore_kessler@morar.biz"], ["phone", "569.412.3495"], ["league_id", 4], ["created_at", "2020-07-10 19:12:58.276034"], ["updated_at", "2020-07-10 19:12:58.276034"]]
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 4]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTeam Create (0.3ms)[0m  [1m[32mINSERT INTO "teams" ("name", "email", "phone", "league_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Ohio Foxes"], ["email", "olinda_wyman@erdman-abbott.net"], ["phone", "805-892-0461"], ["league_id", 5], ["created_at", "2020-07-10 19:12:58.284127"], ["updated_at", "2020-07-10 19:12:58.284127"]]
+  [1m[35m (15.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTeam Create (0.3ms)[0m  [1m[32mINSERT INTO "teams" ("name", "email", "phone", "league_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "New Jersey Oracles"], ["email", "jutta@boyle.biz"], ["phone", "(301) 676-5801"], ["league_id", 1], ["created_at", "2020-07-10 19:12:58.304461"], ["updated_at", "2020-07-10 19:12:58.304461"]]
+  [1m[35m (15.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTeam Create (0.3ms)[0m  [1m[32mINSERT INTO "teams" ("name", "email", "phone", "league_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "California Birds"], ["email", "alison_zemlak@lebsack-fahey.org"], ["phone", "240-548-3968"], ["league_id", 2], ["created_at", "2020-07-10 19:12:58.324499"], ["updated_at", "2020-07-10 19:12:58.324499"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTeam Create (0.4ms)[0m  [1m[32mINSERT INTO "teams" ("name", "email", "phone", "league_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Wyoming Foxes"], ["email", "russell_turcotte@roberts.co"], ["phone", "815-166-2696"], ["league_id", 3], ["created_at", "2020-07-10 19:12:58.333115"], ["updated_at", "2020-07-10 19:12:58.333115"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 3]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTeam Create (0.3ms)[0m  [1m[32mINSERT INTO "teams" ("name", "email", "phone", "league_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Montana Ants"], ["email", "janiece_morissette@schmitt.com"], ["phone", "178.689.3682"], ["league_id", 4], ["created_at", "2020-07-10 19:12:58.339168"], ["updated_at", "2020-07-10 19:12:58.339168"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 4]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTeam Create (0.4ms)[0m  [1m[32mINSERT INTO "teams" ("name", "email", "phone", "league_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "North Dakota Prophets"], ["email", "nicky_schaefer@kohler.io"], ["phone", "1-470-297-4921"], ["league_id", 5], ["created_at", "2020-07-10 19:12:58.344831"], ["updated_at", "2020-07-10 19:12:58.344831"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTeam Create (0.3ms)[0m  [1m[32mINSERT INTO "teams" ("name", "email", "phone", "league_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "West Virginia Cats"], ["email", "chuck@beier.name"], ["phone", "723-087-9089"], ["league_id", 1], ["created_at", "2020-07-10 19:12:58.350441"], ["updated_at", "2020-07-10 19:12:58.350441"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTeam Create (0.4ms)[0m  [1m[32mINSERT INTO "teams" ("name", "email", "phone", "league_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Nevada Goblins"], ["email", "sanjuana_howell@wehner.com"], ["phone", "(146) 513-1693"], ["league_id", 2], ["created_at", "2020-07-10 19:12:58.355929"], ["updated_at", "2020-07-10 19:12:58.355929"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTeam Create (0.3ms)[0m  [1m[32mINSERT INTO "teams" ("name", "email", "phone", "league_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Florida Zombies"], ["email", "juanita@pollich.co"], ["phone", "(519) 199-2832"], ["league_id", 3], ["created_at", "2020-07-10 19:12:58.361672"], ["updated_at", "2020-07-10 19:12:58.361672"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 3]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTeam Create (0.4ms)[0m  [1m[32mINSERT INTO "teams" ("name", "email", "phone", "league_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "North Carolina Black Cats"], ["email", "candice_conn@lind-miller.com"], ["phone", "606-903-7441"], ["league_id", 4], ["created_at", "2020-07-10 19:12:58.367435"], ["updated_at", "2020-07-10 19:12:58.367435"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."id" ASC LIMIT ? OFFSET ?[0m  [["LIMIT", 1], ["OFFSET", 4]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTeam Create (0.3ms)[0m  [1m[32mINSERT INTO "teams" ("name", "email", "phone", "league_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "New York Penguins"], ["email", "tama.mclaughlin@paucek.com"], ["phone", "1-769-646-1351"], ["league_id", 5], ["created_at", "2020-07-10 19:12:58.373251"], ["updated_at", "2020-07-10 19:12:58.373251"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
