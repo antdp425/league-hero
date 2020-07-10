@@ -13,8 +13,8 @@
 /db/*.sqlite3-*
 
 # Ignore all logfiles and tempfiles.
-/leage-hero-backend/log/*
-/leage-hero-backend/tmp/*
+leage-hero-backend/log/*
+leage-hero-backend/tmp/*
 !/log/.keep
 !/tmp/.keep
 
