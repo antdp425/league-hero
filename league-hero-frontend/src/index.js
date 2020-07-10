@@ -17,23 +17,27 @@ class League{
       .then (resp =>  resp.json())
       .then (leagues => {
          let container = document.querySelector(".container-fluid")
-         let div = document.createElement("div")
-         div.id = "league-rows"
-         div.className = "row"
-         container.appendChild(div)
+         let leagueRow = document.createElement("div")
+         let actionRow = document.createElement("div")
+         
+         leagueRow.id = "league-rows"
+         leagueRow.className = "row"
+
+         actionRow.id = "action-row"
+         actionRow.className = "row"
+         
+         container.appendChild(actionRow)
+         container.appendChild(leagueRow)
+
+         actionRow.innerHTML += League.newLeagueButton()
          leagues.forEach(league => {
             let l = new League(league)
-            div.innerHTML += l.renderLeague()
+            leagueRow.innerHTML += l.renderLeague()
          })
       })
    }
 
    renderLeague(){
-      let card = this.renderLeagueInfo()
-      return card
-   }
-
-   renderLeagueInfo(){
       return `
       <div class="col-xs-10 col-sm-6 col-md-4">
          <div class="card bg-light mb-3">
@@ -46,4 +50,11 @@ class League{
       </div>
       `
    }
+
+   static newLeagueButton(){
+      return `
+      <button type="button" class="btn btn-block btn-outline-primary    ml-auto">Add League</button>
+      `
+   }
+
 }

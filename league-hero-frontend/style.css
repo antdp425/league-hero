@@ -1,3 +1,9 @@
 .container-fluid{
    padding: 1.5rem;
 }
+
+#action-row{
+   padding-left: 15px;
+   padding-right: 15px;
+   padding-bottom: 10px;
+}
