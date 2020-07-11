@@ -37,7 +37,7 @@ class League{
 
          leagues.forEach(league => {
             let l = new League(league)
-            leagueRow.innerHTML += l.renderLeague()
+            leagueRow.firstChild += l.renderLeague()
          })
       })
    }
@@ -105,6 +105,8 @@ class League{
       form.addEventListener("submit", () => {
          event.preventDefault()
          this.createLeague()
+         form.reset()
+         form.parentNode.removeChild(form)
       })
    }
 
@@ -134,8 +136,5 @@ class League{
          leagueRow.innerHTML += l.renderLeague()
 
       })
-         // leagues.forEach(league => {
-         //    let l = new League(league)
-         //    leagueRow.innerHTML += l.renderLeague()
    }
 }
