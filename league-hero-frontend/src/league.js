@@ -1,9 +1,9 @@
 class League{
    constructor(leagueInfo){
       this.name = leagueInfo.name
-      this.format = leagueInfo.league_format
-      this.start = leagueInfo.start_date
-      this.end = leagueInfo.end_date
+      this.league_format = leagueInfo.league_format
+      this.start_date = leagueInfo.start_date
+      this.end_date = leagueInfo.end_date
    }
 
    static getLeagues(){

@@ -3,9 +3,10 @@ class TeamsController < ApplicationController
 
   # GET /teams
   def index
-    teams = Team.all
+    teams = Team.all.order(name: :asc)
 
-    render json: teams
+    render json: teams.to_json(:include => {
+      :league => {:only => [:name]}})
   end
 
   # GET /teams/1

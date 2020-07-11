@@ -12744,3 +12744,2403 @@ Processing by LeaguesController#index as */*
 Completed 200 OK in 20ms (Views: 18.1ms | ActiveRecord: 1.6ms | Allocations: 16245)
 
 
+Started GET "/leagues" for ::1 at 2020-07-11 14:34:59 -0400
+Processing by LeaguesController#index as */*
+  [1m[36mLeague Load (0.2ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 1]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 2]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 3]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 4]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 5]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 7]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 54]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 55]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 56]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 57]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+Completed 200 OK in 22ms (Views: 20.2ms | ActiveRecord: 1.6ms | Allocations: 16245)
+
+
+Started GET "/leagues" for ::1 at 2020-07-11 18:37:16 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LeaguesController#index as */*
+  [1m[36mLeague Load (0.2ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 1]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 2]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 3]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 4]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 5]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 7]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 54]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 55]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 56]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 57]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+Completed 200 OK in 158ms (Views: 84.2ms | ActiveRecord: 2.1ms | Allocations: 30967)
+
+
+Started GET "/leagues" for ::1 at 2020-07-11 18:39:56 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by LeaguesController#index as */*
+  [1m[36mLeague Load (0.3ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 1]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 2]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 3]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 4]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 5]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 7]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 54]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 55]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 56]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 57]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+Completed 200 OK in 67ms (Views: 61.1ms | ActiveRecord: 2.8ms | Allocations: 27850)
+
+
+Started GET "/leagues" for ::1 at 2020-07-11 18:39:59 -0400
+Processing by LeaguesController#index as */*
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 1]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 2]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 3]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 4]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 5]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 7]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 54]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 55]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 56]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 57]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+Completed 200 OK in 31ms (Views: 28.9ms | ActiveRecord: 1.8ms | Allocations: 16263)
+
+
+Started GET "/leagues" for ::1 at 2020-07-11 18:40:26 -0400
+Processing by LeaguesController#index as */*
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 1]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.9ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 2]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 3]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (2.0ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 4]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 5]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 7]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 54]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 55]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 56]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 57]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+Completed 200 OK in 70ms (Views: 65.2ms | ActiveRecord: 4.8ms | Allocations: 16263)
+
+
+Started GET "/teams" for ::1 at 2020-07-11 18:40:30 -0400
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (1.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY "teams"."name" ASC[0m
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+Completed 200 OK in 25ms (Views: 23.0ms | ActiveRecord: 1.1ms | Allocations: 5419)
+
+
+Started GET "/leagues" for ::1 at 2020-07-11 18:40:51 -0400
+Processing by LeaguesController#index as */*
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 1]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 2]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 3]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 4]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 5]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 7]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 54]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 55]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 56]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 57]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+Completed 200 OK in 20ms (Views: 18.1ms | ActiveRecord: 1.6ms | Allocations: 16245)
+
+
+Started GET "/teams" for ::1 at 2020-07-11 18:40:55 -0400
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY "teams"."name" ASC[0m
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.2ms | Allocations: 5341)
+
+
+Started GET "/teams" for ::1 at 2020-07-11 18:40:57 -0400
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY "teams"."name" ASC[0m
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.2ms | Allocations: 5341)
+
+
+Started GET "/leagues" for ::1 at 2020-07-11 18:42:09 -0400
+Processing by LeaguesController#index as */*
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 1]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 2]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 3]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 4]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 5]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 7]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 54]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 55]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 56]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 57]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 1.7ms | Allocations: 16245)
+
+
+Started GET "/teams" for ::1 at 2020-07-11 18:42:12 -0400
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY "teams"."name" ASC[0m
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.2ms | Allocations: 5341)
+
+
+Started GET "/leagues" for ::1 at 2020-07-11 18:43:23 -0400
+Processing by LeaguesController#index as */*
+  [1m[36mLeague Load (0.2ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 1]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 2]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 3]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 4]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 5]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 7]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 54]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 55]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 56]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 57]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+Completed 200 OK in 21ms (Views: 19.1ms | ActiveRecord: 1.6ms | Allocations: 16246)
+
+
+Started GET "/teams" for ::1 at 2020-07-11 18:43:26 -0400
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY "teams"."name" ASC[0m
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.2ms | Allocations: 5341)
+
+
+Started GET "/leagues" for ::1 at 2020-07-11 18:43:50 -0400
+Processing by LeaguesController#index as */*
+  [1m[36mLeague Load (0.2ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 1]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 2]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 3]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 4]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 5]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 7]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 54]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 55]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 56]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 57]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+Completed 200 OK in 33ms (Views: 30.9ms | ActiveRecord: 2.2ms | Allocations: 16245)
+
+
+Started GET "/teams" for ::1 at 2020-07-11 18:43:52 -0400
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY "teams"."name" ASC[0m
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.2ms | Allocations: 5341)
+
+
+Started GET "/leagues" for ::1 at 2020-07-11 18:44:12 -0400
+Processing by LeaguesController#index as */*
+  [1m[36mLeague Load (0.2ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 1]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 2]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 3]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 4]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 5]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 7]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 54]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 55]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 56]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 57]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 1.6ms | Allocations: 16250)
+
+
+Started GET "/teams" for ::1 at 2020-07-11 18:44:13 -0400
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY "teams"."name" ASC[0m
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.2ms | Allocations: 5341)
+
+
+Started GET "/leagues" for ::1 at 2020-07-11 18:44:15 -0400
+Processing by LeaguesController#index as */*
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 1]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 2]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 3]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 4]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 5]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (1.0ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 7]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 54]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 55]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 56]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 57]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+Completed 200 OK in 20ms (Views: 17.9ms | ActiveRecord: 2.3ms | Allocations: 16245)
+
+
+Started GET "/teams" for ::1 at 2020-07-11 18:44:16 -0400
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY "teams"."name" ASC[0m
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.2ms | Allocations: 5341)
+
+
+Started GET "/leagues" for ::1 at 2020-07-11 18:44:18 -0400
+Processing by LeaguesController#index as */*
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 1]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 2]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 3]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 4]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 5]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 7]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 54]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 55]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 56]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 57]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 1.5ms | Allocations: 16245)
+
+
+Started GET "/leagues" for ::1 at 2020-07-11 18:44:19 -0400
+Processing by LeaguesController#index as */*
+  [1m[36mLeague Load (0.2ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 1]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 2]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 3]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 4]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 5]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 7]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 54]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 55]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 56]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 57]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+Completed 200 OK in 29ms (Views: 26.1ms | ActiveRecord: 2.3ms | Allocations: 16248)
+
+
+Started GET "/leagues" for ::1 at 2020-07-11 18:44:25 -0400
+Processing by LeaguesController#index as */*
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 1]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 2]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 3]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 4]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 5]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 7]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 54]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 55]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 56]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 57]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+Completed 200 OK in 19ms (Views: 17.0ms | ActiveRecord: 1.4ms | Allocations: 16245)
+
+
+Started GET "/leagues" for ::1 at 2020-07-11 18:44:27 -0400
+Processing by LeaguesController#index as */*
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 1]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 2]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 3]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 4]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 5]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 7]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 54]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 55]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 56]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 57]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+Completed 200 OK in 19ms (Views: 16.9ms | ActiveRecord: 1.5ms | Allocations: 16245)
+
+
+Started GET "/teams" for ::1 at 2020-07-11 18:44:28 -0400
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY "teams"."name" ASC[0m
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.2ms | Allocations: 5341)
+
+
+Started GET "/leagues" for ::1 at 2020-07-11 18:44:29 -0400
+Processing by LeaguesController#index as */*
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 1]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 2]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 3]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 4]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 5]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 7]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 54]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 55]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 56]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 57]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 1.4ms | Allocations: 16248)
+
+
+Started GET "/teams" for ::1 at 2020-07-11 18:45:58 -0400
+Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY "teams"."name" ASC[0m
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.2ms | Allocations: 5340)
+
+
+Started GET "/favicon.ico" for ::1 at 2020-07-11 18:45:58 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/teams" for ::1 at 2020-07-11 18:46:19 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY "teams"."name" ASC[0m
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+Completed 200 OK in 48ms (Views: 44.6ms | ActiveRecord: 2.1ms | Allocations: 45044)
+
+
+Started GET "/favicon.ico" for ::1 at 2020-07-11 18:46:19 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/teams" for ::1 at 2020-07-11 18:46:37 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY "teams"."name" ASC[0m
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 1.5ms | Allocations: 16770)
+
+
+  
+NoMethodError (undefined method `only' for #<Team:0x00007f8187e10630>):
+  
+app/controllers/teams_controller.rb:8:in `index'
+Started GET "/favicon.ico" for ::1 at 2020-07-11 18:46:37 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/teams" for ::1 at 2020-07-11 18:46:47 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY "teams"."name" ASC[0m
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 1.3ms | Allocations: 16750)
+
+
+  
+NoMethodError (undefined method `only' for #<Team:0x00007f8187e107c0>):
+  
+app/controllers/teams_controller.rb:8:in `index'
+Started GET "/favicon.ico" for ::1 at 2020-07-11 18:46:48 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/teams" for ::1 at 2020-07-11 18:47:07 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:10: syntax error, unexpected end, expecting ']'
+  end
+  ^~~
+/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/teams_controller.rb:10: syntax error, unexpected end, expecting ']'
+app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end
+app/controllers/teams_controller.rb:10: syntax error, unexpected end, expecting ']'
+app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end
+Started GET "/favicon.ico" for ::1 at 2020-07-11 18:47:08 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/teams" for ::1 at 2020-07-11 18:48:20 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY "teams"."name" ASC[0m
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 1.3ms | Allocations: 16713)
+
+
+  
+NoMethodError (undefined method `only' for #<Team:0x00007f8181649718>):
+  
+app/controllers/teams_controller.rb:8:in `index'
+Started GET "/favicon.ico" for ::1 at 2020-07-11 18:48:20 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/teams" for ::1 at 2020-07-11 18:48:33 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:9: syntax error, unexpected ']', expecting end
+...e: [:league], :only => [:name]]
+...                              ^
+/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/teams_controller.rb:9: syntax error, unexpected ']', expecting end
+app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end
+app/controllers/teams_controller.rb:9: syntax error, unexpected ']', expecting end
+app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end
+Started GET "/favicon.ico" for ::1 at 2020-07-11 18:48:33 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/teams" for ::1 at 2020-07-11 18:48:46 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY "teams"."name" ASC[0m
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+Completed 200 OK in 46ms (Views: 42.8ms | ActiveRecord: 1.9ms | Allocations: 42942)
+
+
+Started GET "/favicon.ico" for ::1 at 2020-07-11 18:48:46 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/teams" for ::1 at 2020-07-11 18:49:04 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY "teams"."name" ASC[0m
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 1.3ms | Allocations: 16714)
+
+
+  
+NoMethodError (undefined method `only' for #<Team:0x00007f8187d3a3a0>):
+  
+app/controllers/teams_controller.rb:8:in `index'
+Started GET "/favicon.ico" for ::1 at 2020-07-11 18:49:05 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/teams" for ::1 at 2020-07-11 18:51:16 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:9: syntax error, unexpected ',', expecting =>
+    include: {:league, only: [:name]}
+                     ^
+/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:9: syntax error, unexpected '}', expecting end
+...clude: {:league, only: [:name]}
+...                              ^
+/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/teams_controller.rb:9: syntax error, unexpected ',', expecting =>
+app/controllers/teams_controller.rb:9: syntax error, unexpected '}', expecting end
+app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end
+app/controllers/teams_controller.rb:9: syntax error, unexpected ',', expecting =>
+app/controllers/teams_controller.rb:9: syntax error, unexpected '}', expecting end
+app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end
+Started GET "/favicon.ico" for ::1 at 2020-07-11 18:51:17 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/teams" for ::1 at 2020-07-11 18:53:23 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:9: syntax error, unexpected ':', expecting ']'
+    include: [:leagues => only: [:name]]
+                              ^
+/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:9: syntax error, unexpected ']', expecting end
+...de: [:leagues => only: [:name]]
+...                              ^
+/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/teams_controller.rb:9: syntax error, unexpected ':', expecting ']'
+app/controllers/teams_controller.rb:9: syntax error, unexpected ']', expecting end
+app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end
+app/controllers/teams_controller.rb:9: syntax error, unexpected ':', expecting ']'
+app/controllers/teams_controller.rb:9: syntax error, unexpected ']', expecting end
+app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end
+Started GET "/favicon.ico" for ::1 at 2020-07-11 18:53:23 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/teams" for ::1 at 2020-07-11 18:53:25 -0400
+  
+SyntaxError (/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:9: syntax error, unexpected ':', expecting ']'
+    include: [:leagues => only: [:name]]
+                              ^
+/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:9: syntax error, unexpected ']', expecting end
+...de: [:leagues => only: [:name]]
+...                              ^
+/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/teams_controller.rb:9: syntax error, unexpected ':', expecting ']'
+app/controllers/teams_controller.rb:9: syntax error, unexpected ']', expecting end
+app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end
+app/controllers/teams_controller.rb:9: syntax error, unexpected ':', expecting ']'
+app/controllers/teams_controller.rb:9: syntax error, unexpected ']', expecting end
+app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end
+Started GET "/favicon.ico" for ::1 at 2020-07-11 18:53:25 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/teams" for ::1 at 2020-07-11 18:53:26 -0400
+  
+SyntaxError (/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:9: syntax error, unexpected ':', expecting ']'
+    include: [:leagues => only: [:name]]
+                              ^
+/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:9: syntax error, unexpected ']', expecting end
+...de: [:leagues => only: [:name]]
+...                              ^
+/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/teams_controller.rb:9: syntax error, unexpected ':', expecting ']'
+app/controllers/teams_controller.rb:9: syntax error, unexpected ']', expecting end
+app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end
+app/controllers/teams_controller.rb:9: syntax error, unexpected ':', expecting ']'
+app/controllers/teams_controller.rb:9: syntax error, unexpected ']', expecting end
+app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end
+Started GET "/teams" for ::1 at 2020-07-11 18:53:26 -0400
+  
+SyntaxError (/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:9: syntax error, unexpected ':', expecting ']'
+    include: [:leagues => only: [:name]]
+                              ^
+/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:9: syntax error, unexpected ']', expecting end
+...de: [:leagues => only: [:name]]
+...                              ^
+/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/teams_controller.rb:9: syntax error, unexpected ':', expecting ']'
+app/controllers/teams_controller.rb:9: syntax error, unexpected ']', expecting end
+app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end
+app/controllers/teams_controller.rb:9: syntax error, unexpected ':', expecting ']'
+app/controllers/teams_controller.rb:9: syntax error, unexpected ']', expecting end
+app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end
+Started GET "/teams" for ::1 at 2020-07-11 18:53:26 -0400
+  
+SyntaxError (/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:9: syntax error, unexpected ':', expecting ']'
+    include: [:leagues => only: [:name]]
+                              ^
+/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:9: syntax error, unexpected ']', expecting end
+...de: [:leagues => only: [:name]]
+...                              ^
+/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/teams_controller.rb:9: syntax error, unexpected ':', expecting ']'
+app/controllers/teams_controller.rb:9: syntax error, unexpected ']', expecting end
+app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end
+app/controllers/teams_controller.rb:9: syntax error, unexpected ':', expecting ']'
+app/controllers/teams_controller.rb:9: syntax error, unexpected ']', expecting end
+app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end
+Started GET "/teams" for ::1 at 2020-07-11 18:53:26 -0400
+  
+SyntaxError (/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:9: syntax error, unexpected ':', expecting ']'
+    include: [:leagues => only: [:name]]
+                              ^
+/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:9: syntax error, unexpected ']', expecting end
+...de: [:leagues => only: [:name]]
+...                              ^
+/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/teams_controller.rb:9: syntax error, unexpected ':', expecting ']'
+app/controllers/teams_controller.rb:9: syntax error, unexpected ']', expecting end
+app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end
+app/controllers/teams_controller.rb:9: syntax error, unexpected ':', expecting ']'
+app/controllers/teams_controller.rb:9: syntax error, unexpected ']', expecting end
+app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end
+Started GET "/teams" for ::1 at 2020-07-11 18:53:26 -0400
+  
+SyntaxError (/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:9: syntax error, unexpected ':', expecting ']'
+    include: [:leagues => only: [:name]]
+                              ^
+/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:9: syntax error, unexpected ']', expecting end
+...de: [:leagues => only: [:name]]
+...                              ^
+/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/teams_controller.rb:9: syntax error, unexpected ':', expecting ']'
+app/controllers/teams_controller.rb:9: syntax error, unexpected ']', expecting end
+app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end
+app/controllers/teams_controller.rb:9: syntax error, unexpected ':', expecting ']'
+app/controllers/teams_controller.rb:9: syntax error, unexpected ']', expecting end
+app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end
+Started GET "/favicon.ico" for ::1 at 2020-07-11 18:53:27 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/teams" for ::1 at 2020-07-11 18:53:30 -0400
+  
+SyntaxError (/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:9: syntax error, unexpected ':', expecting ']'
+    include: [:leagues => only: [:name]]
+                              ^
+/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:9: syntax error, unexpected ']', expecting end
+...de: [:leagues => only: [:name]]
+...                              ^
+/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/teams_controller.rb:9: syntax error, unexpected ':', expecting ']'
+app/controllers/teams_controller.rb:9: syntax error, unexpected ']', expecting end
+app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end
+app/controllers/teams_controller.rb:9: syntax error, unexpected ':', expecting ']'
+app/controllers/teams_controller.rb:9: syntax error, unexpected ']', expecting end
+app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end
+Started GET "/teams" for ::1 at 2020-07-11 18:53:30 -0400
+  
+SyntaxError (/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:9: syntax error, unexpected ':', expecting ']'
+    include: [:leagues => only: [:name]]
+                              ^
+/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:9: syntax error, unexpected ']', expecting end
+...de: [:leagues => only: [:name]]
+...                              ^
+/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/teams_controller.rb:9: syntax error, unexpected ':', expecting ']'
+app/controllers/teams_controller.rb:9: syntax error, unexpected ']', expecting end
+app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end
+app/controllers/teams_controller.rb:9: syntax error, unexpected ':', expecting ']'
+app/controllers/teams_controller.rb:9: syntax error, unexpected ']', expecting end
+app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end
+Started GET "/teams" for ::1 at 2020-07-11 18:53:33 -0400
+  
+SyntaxError (/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:9: syntax error, unexpected ':', expecting ']'
+    include: [:leagues => only: [:name]]
+                              ^
+/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:9: syntax error, unexpected ']', expecting end
+...de: [:leagues => only: [:name]]
+...                              ^
+/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/teams_controller.rb:9: syntax error, unexpected ':', expecting ']'
+app/controllers/teams_controller.rb:9: syntax error, unexpected ']', expecting end
+app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end
+app/controllers/teams_controller.rb:9: syntax error, unexpected ':', expecting ']'
+app/controllers/teams_controller.rb:9: syntax error, unexpected ']', expecting end
+app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end
+Started GET "/teams" for ::1 at 2020-07-11 18:54:02 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:9: syntax error, unexpected =>, expecting end
+    include: [:leagues] => {only: [:name]}
+                        ^~):
+  
+app/controllers/teams_controller.rb:9: syntax error, unexpected =>, expecting end
+app/controllers/teams_controller.rb:9: syntax error, unexpected =>, expecting end
+Started GET "/favicon.ico" for ::1 at 2020-07-11 18:54:03 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/teams" for ::1 at 2020-07-11 18:54:03 -0400
+  
+SyntaxError (/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:9: syntax error, unexpected =>, expecting end
+    include: [:leagues] => {only: [:name]}
+                        ^~):
+  
+app/controllers/teams_controller.rb:9: syntax error, unexpected =>, expecting end
+app/controllers/teams_controller.rb:9: syntax error, unexpected =>, expecting end
+Started GET "/favicon.ico" for ::1 at 2020-07-11 18:54:03 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/teams" for ::1 at 2020-07-11 18:54:26 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:9: syntax error, unexpected ':', expecting ']'
+    include: [:leagues => only: [:name]]
+                              ^
+/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:9: syntax error, unexpected ']', expecting end
+...de: [:leagues => only: [:name]]
+...                              ^
+/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/teams_controller.rb:9: syntax error, unexpected ':', expecting ']'
+app/controllers/teams_controller.rb:9: syntax error, unexpected ']', expecting end
+app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end
+app/controllers/teams_controller.rb:9: syntax error, unexpected ':', expecting ']'
+app/controllers/teams_controller.rb:9: syntax error, unexpected ']', expecting end
+app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end
+Started GET "/favicon.ico" for ::1 at 2020-07-11 18:54:26 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/teams" for ::1 at 2020-07-11 18:54:45 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:9: syntax error, unexpected =>
+    include: [leages: => only: [:name]]
+                      ^~
+/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:9: syntax error, unexpected ']', expecting end
+...ude: [leages: => only: [:name]]
+...                              ^
+/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/teams_controller.rb:9: syntax error, unexpected =>
+app/controllers/teams_controller.rb:9: syntax error, unexpected ']', expecting end
+app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end
+app/controllers/teams_controller.rb:9: syntax error, unexpected =>
+app/controllers/teams_controller.rb:9: syntax error, unexpected ']', expecting end
+app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end
+Started GET "/favicon.ico" for ::1 at 2020-07-11 18:54:46 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/teams" for ::1 at 2020-07-11 18:54:47 -0400
+  
+SyntaxError (/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:9: syntax error, unexpected =>
+    include: [leages: => only: [:name]]
+                      ^~
+/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:9: syntax error, unexpected ']', expecting end
+...ude: [leages: => only: [:name]]
+...                              ^
+/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/teams_controller.rb:9: syntax error, unexpected =>
+app/controllers/teams_controller.rb:9: syntax error, unexpected ']', expecting end
+app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end
+app/controllers/teams_controller.rb:9: syntax error, unexpected =>
+app/controllers/teams_controller.rb:9: syntax error, unexpected ']', expecting end
+app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end
+Started GET "/favicon.ico" for ::1 at 2020-07-11 18:54:47 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/teams" for ::1 at 2020-07-11 18:55:00 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:9: syntax error, unexpected =>
+    include: [leages: => {only: [:name]}]
+                      ^~
+/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:9: syntax error, unexpected ']', expecting end
+...e: [leages: => {only: [:name]}]
+...                              ^
+/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/teams_controller.rb:9: syntax error, unexpected =>
+app/controllers/teams_controller.rb:9: syntax error, unexpected ']', expecting end
+app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end
+app/controllers/teams_controller.rb:9: syntax error, unexpected =>
+app/controllers/teams_controller.rb:9: syntax error, unexpected ']', expecting end
+app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end
+Started GET "/favicon.ico" for ::1 at 2020-07-11 18:55:00 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/teams" for ::1 at 2020-07-11 18:57:08 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:9: syntax error, unexpected =>
+    include: [league: => {only: [:name]}]
+                      ^~
+/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:9: syntax error, unexpected ']', expecting end
+...e: [league: => {only: [:name]}]
+...                              ^
+/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/teams_controller.rb:9: syntax error, unexpected =>
+app/controllers/teams_controller.rb:9: syntax error, unexpected ']', expecting end
+app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end
+app/controllers/teams_controller.rb:9: syntax error, unexpected =>
+app/controllers/teams_controller.rb:9: syntax error, unexpected ']', expecting end
+app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end
+Started GET "/favicon.ico" for ::1 at 2020-07-11 18:57:09 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/teams" for ::1 at 2020-07-11 18:57:17 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:9: syntax error, unexpected ']'
+    include: [league:]
+                     ^
+/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/teams_controller.rb:9: syntax error, unexpected ']'
+app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end
+app/controllers/teams_controller.rb:9: syntax error, unexpected ']'
+app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end
+Started GET "/favicon.ico" for ::1 at 2020-07-11 18:57:17 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/teams" for ::1 at 2020-07-11 18:57:21 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY "teams"."name" ASC[0m
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+Completed 200 OK in 72ms (Views: 67.5ms | ActiveRecord: 2.1ms | Allocations: 45109)
+
+
+Started GET "/favicon.ico" for ::1 at 2020-07-11 18:57:21 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/teams" for ::1 at 2020-07-11 18:57:36 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:9: syntax error, unexpected tSTRING_DEND, expecting ')'
+    include: ([:league]}
+                       ^
+/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:52: syntax error, unexpected end, expecting ')'):
+  
+app/controllers/teams_controller.rb:9: syntax error, unexpected tSTRING_DEND, expecting ')'
+app/controllers/teams_controller.rb:52: syntax error, unexpected end, expecting ')'
+app/controllers/teams_controller.rb:9: syntax error, unexpected tSTRING_DEND, expecting ')'
+app/controllers/teams_controller.rb:52: syntax error, unexpected end, expecting ')'
+Started GET "/favicon.ico" for ::1 at 2020-07-11 18:57:37 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/teams" for ::1 at 2020-07-11 18:57:48 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:9: syntax error, unexpected =>, expecting end
+    include: [:league] => only: [:name]
+                       ^~):
+  
+app/controllers/teams_controller.rb:9: syntax error, unexpected =>, expecting end
+app/controllers/teams_controller.rb:9: syntax error, unexpected =>, expecting end
+Started GET "/favicon.ico" for ::1 at 2020-07-11 18:57:48 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/teams" for ::1 at 2020-07-11 18:57:59 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:9: syntax error, unexpected =>, expecting end
+    include: [:league] => {only: [:name]}
+                       ^~):
+  
+app/controllers/teams_controller.rb:9: syntax error, unexpected =>, expecting end
+app/controllers/teams_controller.rb:9: syntax error, unexpected =>, expecting end
+Started GET "/favicon.ico" for ::1 at 2020-07-11 18:57:59 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/teams" for ::1 at 2020-07-11 19:01:02 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:9: syntax error, unexpected ',', expecting =>
+    include: {:league, only: [:name]}
+                     ^
+/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:9: syntax error, unexpected '}', expecting end
+...clude: {:league, only: [:name]}
+...                              ^
+/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/teams_controller.rb:9: syntax error, unexpected ',', expecting =>
+app/controllers/teams_controller.rb:9: syntax error, unexpected '}', expecting end
+app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end
+app/controllers/teams_controller.rb:9: syntax error, unexpected ',', expecting =>
+app/controllers/teams_controller.rb:9: syntax error, unexpected '}', expecting end
+app/controllers/teams_controller.rb:52: syntax error, unexpected end-of-input, expecting end
+Started GET "/favicon.ico" for ::1 at 2020-07-11 19:01:03 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/teams" for ::1 at 2020-07-11 19:03:32 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:9: syntax error, unexpected =>, expecting ')'
+    (:include => {
+              ^~
+/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:10: syntax error, unexpected '\n', expecting =>
+/Users/Anthony/Dropbox/Documents/Flatiron/Code/Projects/league-hero/league-hero-backend/app/controllers/teams_controller.rb:53: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/teams_controller.rb:9: syntax error, unexpected =>, expecting ')'
+app/controllers/teams_controller.rb:10: syntax error, unexpected '\n', expecting =>
+app/controllers/teams_controller.rb:53: syntax error, unexpected end-of-input, expecting end
+app/controllers/teams_controller.rb:9: syntax error, unexpected =>, expecting ')'
+app/controllers/teams_controller.rb:10: syntax error, unexpected '\n', expecting =>
+app/controllers/teams_controller.rb:53: syntax error, unexpected end-of-input, expecting end
+Started GET "/favicon.ico" for ::1 at 2020-07-11 19:03:32 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/teams" for ::1 at 2020-07-11 19:03:41 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TeamsController#index as HTML
+Completed 500 Internal Server Error in 74ms (ActiveRecord: 0.3ms | Allocations: 38192)
+
+
+  
+NoMethodError (undefined method `teams' for #<TeamsController:0x00007f8187c4de10>
+Did you mean?  teams_url):
+  
+app/controllers/teams_controller.rb:8:in `index'
+Started GET "/favicon.ico" for ::1 at 2020-07-11 19:03:41 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/teams" for ::1 at 2020-07-11 19:03:46 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY "teams"."name" ASC[0m
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+Completed 200 OK in 54ms (Views: 0.1ms | ActiveRecord: 2.0ms | Allocations: 39269)
+
+
+Started GET "/favicon.ico" for ::1 at 2020-07-11 19:03:46 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/teams" for ::1 at 2020-07-11 19:04:45 -0400
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY "teams"."name" ASC[0m
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.2ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.2ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+Completed 200 OK in 48ms (Views: 0.1ms | ActiveRecord: 1.3ms | Allocations: 27685)
+
+
+Started GET "/teams" for ::1 at 2020-07-11 19:05:16 -0400
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY "teams"."name" ASC[0m
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+Completed 200 OK in 44ms (Views: 0.1ms | ActiveRecord: 1.4ms | Allocations: 27690)
+
+
+Started GET "/teams" for ::1 at 2020-07-11 19:05:21 -0400
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY "teams"."name" ASC[0m
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.2ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+Completed 200 OK in 35ms (Views: 0.1ms | ActiveRecord: 1.2ms | Allocations: 27683)
+
+
+Started GET "/teams" for ::1 at 2020-07-11 19:05:22 -0400
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY "teams"."name" ASC[0m
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+Completed 200 OK in 50ms (Views: 0.1ms | ActiveRecord: 1.1ms | Allocations: 27687)
+
+
+Started GET "/teams" for ::1 at 2020-07-11 19:05:22 -0400
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY "teams"."name" ASC[0m
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+Completed 200 OK in 30ms (Views: 0.1ms | ActiveRecord: 0.9ms | Allocations: 27683)
+
+
+Started GET "/leagues" for ::1 at 2020-07-11 19:05:29 -0400
+Processing by LeaguesController#index as */*
+  [1m[36mLeague Load (0.3ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 1]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 2]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 3]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 4]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 5]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 7]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 54]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 55]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 56]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 57]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+Completed 200 OK in 31ms (Views: 28.5ms | ActiveRecord: 1.9ms | Allocations: 16543)
+
+
+Started GET "/teams" for ::1 at 2020-07-11 19:05:30 -0400
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (1.0ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY "teams"."name" ASC[0m
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.2ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+Completed 200 OK in 56ms (Views: 0.1ms | ActiveRecord: 2.0ms | Allocations: 27683)
+
+
+Started GET "/leagues" for ::1 at 2020-07-11 19:05:32 -0400
+Processing by LeaguesController#index as */*
+  [1m[36mLeague Load (1.5ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues"[0m
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.9ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 1]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 2]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 3]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (1.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 4]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 5]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 7]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 54]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 55]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 56]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 57]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+Completed 200 OK in 65ms (Views: 60.2ms | ActiveRecord: 5.0ms | Allocations: 16248)
+
+
