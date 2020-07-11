@@ -2,10 +2,30 @@ const baseURL = "http://localhost:3000"
 const date = new Date
 const today = `${date.getFullYear()}-0${date.getMonth()+1}-${date.getDate()}`
 const tomorrow = `${date.getFullYear()}-0${date.getMonth()+1}-${date.getDate()+1}`
+const nav = document.querySelector("nav")
 
 document.addEventListener("DOMContentLoaded",()=>{
+   nav.addEventListener("click",() => {navigateTo()})
+
    League.getLeagues()
+   
 })
+
+function navigateTo(){
+   switch (event.target.id) {
+      case "logo-nav":
+         console.log("test");
+         
+         return League.getLeagues()
+         break;
+      case "teams-nav":
+         console.log("Hi")
+         break;
+      case "leagues-nav":
+         return League.getLeagues()
+         break;
+   }
+}
 
 class League{
    constructor(leagueInfo){
