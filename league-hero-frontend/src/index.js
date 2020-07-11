@@ -27,7 +27,7 @@ class League{
          actionRow.className = "row"
          
          leagueRow.id = "league-rows"
-         leagueRow.className = "row"
+         leagueRow.classList.add("row","justify-content-center")
          leagueRow.innerHTML = ""
          
          container.appendChild(actionRow)
