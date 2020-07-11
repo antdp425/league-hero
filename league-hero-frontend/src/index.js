@@ -16,7 +16,7 @@ class League{
    }
 
    static getLeagues(){
-      return fetch(`${baseURL}/leagues`)
+      fetch(`${baseURL}/leagues`)
       .then (resp =>  resp.json())
       .then (leagues => {
          let container = document.querySelector(".container-fluid")
@@ -28,6 +28,7 @@ class League{
          
          leagueRow.id = "league-rows"
          leagueRow.className = "row"
+         leagueRow.innerHTML = ""
          
          container.appendChild(actionRow)
          container.appendChild(leagueRow)
@@ -37,7 +38,7 @@ class League{
 
          leagues.forEach(league => {
             let l = new League(league)
-            leagueRow.firstChild += l.renderLeague()
+            leagueRow.innerHTML += l.renderLeague()
          })
       })
    }
@@ -95,8 +96,12 @@ class League{
    static newLeagueListener(){
       let button = document.querySelector("#add-league")
       button.addEventListener("click", () => {
-         event.target.parentElement.innerHTML += this.newLeagueForm()
-         this.createLeagueListener()
+         event.preventDefault()
+         if (document.querySelector("form")){
+         } else {
+            event.target.parentElement.insertAdjacentHTML("beforeend",(this.newLeagueForm()))
+            this.createLeagueListener()
+         }
       })
    }
 
@@ -105,19 +110,20 @@ class League{
       form.addEventListener("submit", () => {
          event.preventDefault()
          this.createLeague()
-         form.reset()
          form.parentNode.removeChild(form)
       })
    }
 
    static createLeague(){
       let form = event.target
+
       let formData = {
          name: form[0].value,
          league_format: form[1].value,
          start_date: form[2].value,
          end_date: form[3].value
       }
+
       let configObj = {
          method: "POST",
          headers: {
@@ -127,14 +133,14 @@ class League{
           body: JSON.stringify(formData)
       }
 
-      return fetch(`${baseURL}/leagues`, configObj)
+      fetch(`${baseURL}/leagues`, configObj)
       .then(resp => resp.json())
       .then(created => {
          let leagueRow = document.querySelector("#league-rows")
 
          let l = new League(created)
+         leagueRow.innerHTML = ""
          leagueRow.innerHTML += l.renderLeague()
-
       })
    }
 }
