@@ -1,4 +1,7 @@
 const baseURL = "http://localhost:3000"
+const date = new Date
+const today = `${date.getFullYear()}-0${date.getMonth()+1}-${date.getDate()}`
+const tomorrow = `${date.getFullYear()}-0${date.getMonth()+1}-${date.getDate()+1}`
 
 document.addEventListener("DOMContentLoaded",()=>{
    League.getLeagues()
@@ -63,13 +66,27 @@ class League{
       return `      
          <form>
             <div class="form-group">
-               <label for="exampleInputEmail1">Email address</label>
-               <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+               <label for="leage_name">League Name:</label>
+               <input type="text" class="form-control" name="league_name" id="league_name">
             </div>
             <div class="form-group">
-               <label for="exampleInputPassword1">Password</label>
-               <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+               <label for="league_format">League Format:</label>
+               <select class="form-control" name="league_format" id="league_format" required>
+                  <option value="">--Select a League Format --</option>
+                  <option>3v3</option>
+                  <option>5v5</option>
+                  <option>7v7</option>
+                  <option>11v11</option>
+               </select>
             </div>
+            <div class="form-group">
+            <label for="start_date">Start Date:</label>
+            <input type="date" class="form-control" name="start_date" id="start_date" min="${today}">
+         </div>
+         <div class="form-group">
+            <label for="end_date">End Date:</label>
+            <input type="date" class="form-control" name="end_date" id="end_date" min="${tomorrow}">
+         </div>
             <button type="submit" class="btn btn-primary">Submit</button>
          </form>
       `
@@ -94,8 +111,10 @@ class League{
    static createLeague(){
       let form = event.target
       let formData = {
-         email: form[0].value,
-         password: form[1].value
+         name: form[0].value,
+         league_format: form[1].value,
+         start_date: form[2].value,
+         end_date: form[3].value
       }
       let configObj = {
          method: "POST",
