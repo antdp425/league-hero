@@ -10,9 +10,9 @@ document.addEventListener("DOMContentLoaded",()=>{
 class League{
    constructor(leagueInfo){
       this.name = leagueInfo.name
-      this.format = leagueInfo.format
-      this.start = leagueInfo.start
-      this.end = leagueInfo.end
+      this.format = leagueInfo.league_format
+      this.start = leagueInfo.start_date
+      this.end = leagueInfo.end_date
    }
 
    static getLeagues(){
@@ -125,8 +125,17 @@ class League{
           body: JSON.stringify(formData)
       }
 
-      console.log(configObj)
-      // fetch(`${baseURL}/leagues`, configObj)
-   }
+      return fetch(`${baseURL}/leagues`, configObj)
+      .then(resp => resp.json())
+      .then(created => {
+         let leagueRow = document.querySelector("#league-rows")
 
+         let l = new League(created)
+         leagueRow.innerHTML += l.renderLeague()
+
+      })
+         // leagues.forEach(league => {
+         //    let l = new League(league)
+         //    leagueRow.innerHTML += l.renderLeague()
+   }
 }

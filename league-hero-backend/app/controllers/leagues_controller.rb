@@ -19,14 +19,15 @@ class LeaguesController < ApplicationController
 
   # POST /leagues
   def create
-    binding.pry
-    # @league = League.new(league_params)
-
-    # # if @league.save
-    # #   render json: @league, status: :created, location: @league
-    # # else
-    # #   render json: @league.errors, status: :unprocessable_entity
-    # # end
+    @league = League.new(league_params)
+    if @league.save
+      render json: @league,
+      include: [:teams], 
+      except: [:created_at, :updated_at],
+      status: :created, location: @league
+    else
+      render json: @league.errors, status: :unprocessable_entity
+    end
   end
 
   # PATCH/PUT /leagues/1
