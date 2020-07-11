@@ -3,26 +3,23 @@ const date = new Date
 const today = `${date.getFullYear()}-0${date.getMonth()+1}-${date.getDate()}`
 const tomorrow = `${date.getFullYear()}-0${date.getMonth()+1}-${date.getDate()+1}`
 const nav = document.querySelector("nav")
+const container = document.querySelector(".container-fluid")
 
 document.addEventListener("DOMContentLoaded",()=>{
    nav.addEventListener("click",() => {navigateTo()})
-
    League.getLeagues()
    
 })
 
 function navigateTo(){
-   switch (event.target.id) {
-      case "logo-nav":
-         console.log("test");
-         
-         return League.getLeagues()
+   switch (true) {
+      case (event.target.id === "logo-nav") || (event.target.id === "leagues-nav"):
+         container.innerHTML = ""
+         console.log("Test")
+         League.getLeagues()
          break;
-      case "teams-nav":
+      case (event.target.id === "teams-nav"):
          console.log("Hi")
-         break;
-      case "leagues-nav":
-         return League.getLeagues()
          break;
    }
 }
