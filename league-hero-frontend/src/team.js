@@ -1,11 +1,11 @@
 class Team{
    // static leagues = []
    constructor(teamInfo){
+      this.id = teamInfo.id
       this.name = teamInfo.name
       this.email = teamInfo.email
       this.phone = teamInfo.phone
       this.paid = teamInfo.paid
-      this.team_id = teamInfo.id
       this.league_id = teamInfo.league_id
       this.league = teamInfo.league.name
       this.league_format = teamInfo.league.league_format
@@ -181,7 +181,7 @@ class Team{
       <div class="col-12">
             <div class="card bg-light mb-3">
                <div class="card-header align-middle">
-               <a href="#" data-team-id="${this.team_id}">${this.name}</a>
+               <a href="#" data-team-id="${this.id}">${this.name}</a>
                      <span>
                         <a href="#" data-league-id="${this.league_id}" class=" badge badge-dark float-right">${this.league}</a>
                      </span>
@@ -196,15 +196,15 @@ class Team{
       <div class="col">
             <div class="card bg-light mb-3">
                <div class="card-header align-middle">
-               <a href="#" data-team-id="${this.team_id}">${this.name}</a>
+               <a href="#" data-team-id="${this.id}">${this.name}</a>
                      <a href="#" data-league-id="${this.league_id}" class=" badge badge-dark float-right">${this.league}</a>
                </div>
                   <div class="card-body">
                   <div class="card-text"><i class="fas fa-envelope"></i> ${this.email}</div>
                   <div class="card-text"><i class="fas fa-mobile"></i> ${this.phone}</div>
                   <br>
-                  <button class="btn btn-info">Edit Team</button>
-                  <button class="btn btn-danger">Delete Team</button>
+                  <button class="btn btn-info" data-league-id="${this.id}>Edit Team</button>
+                  <button class="btn btn-danger" data-league-id="${this.id}>Delete Team</button>
                </div>
             </div>
       </div>

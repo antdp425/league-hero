@@ -40085,3 +40085,1036 @@ Processing by TeamsController#index as */*
 Completed 200 OK in 64ms (Views: 0.1ms | ActiveRecord: 2.7ms | Allocations: 35280)
 
 
+Started GET "/leagues" for ::1 at 2020-07-12 19:15:32 -0400
+Processing by LeaguesController#index as */*
+  [1m[36mLeague Load (0.2ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."start_date" ASC[0m
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 1]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 2]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 3]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 4]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 5]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 55]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 56]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 57]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 58]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 59]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 7]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 65]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 64]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 61]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 62]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 63]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 54]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 60]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+Completed 200 OK in 39ms (Views: 35.5ms | ActiveRecord: 3.3ms | Allocations: 26249)
+
+
+Started GET "/leagues" for ::1 at 2020-07-12 19:31:06 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by LeaguesController#index as */*
+  [1m[36mLeague Load (0.3ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."start_date" ASC[0m
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 1]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 2]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 3]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 4]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 5]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 55]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 56]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 57]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 58]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 59]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 7]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 65]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 64]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 61]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 62]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 63]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 54]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 60]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+Completed 200 OK in 44ms (Views: 40.4ms | ActiveRecord: 2.8ms | Allocations: 26295)
+
+
+Started GET "/teams" for ::1 at 2020-07-12 19:31:43 -0400
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY "teams"."name" ASC[0m
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.2ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.2ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.2ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+Completed 200 OK in 44ms (Views: 0.1ms | ActiveRecord: 1.9ms | Allocations: 35317)
+
+
+Started GET "/leagues" for ::1 at 2020-07-12 19:31:44 -0400
+Processing by LeaguesController#index as */*
+  [1m[36mLeague Load (0.2ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."start_date" ASC[0m
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 1]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 2]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 3]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 4]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 5]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 55]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 56]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 57]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 58]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 59]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 7]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 65]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 64]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 61]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 62]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 63]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 54]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 60]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+Completed 200 OK in 44ms (Views: 41.2ms | ActiveRecord: 2.5ms | Allocations: 26252)
+
+
+Started GET "/teams" for ::1 at 2020-07-12 19:31:44 -0400
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY "teams"."name" ASC[0m
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.2ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.2ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.2ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.2ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+Completed 200 OK in 57ms (Views: 0.2ms | ActiveRecord: 2.1ms | Allocations: 35277)
+
+
+Started GET "/leagues" for ::1 at 2020-07-12 19:31:46 -0400
+Processing by LeaguesController#index as */*
+  [1m[36mLeague Load (0.3ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."start_date" ASC[0m
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 1]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 2]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 3]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 4]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 5]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 55]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 56]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 57]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 58]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 59]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 7]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 65]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 64]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 61]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 62]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 63]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 54]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 60]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+Completed 200 OK in 33ms (Views: 29.7ms | ActiveRecord: 2.5ms | Allocations: 26249)
+
+
+Started GET "/teams" for ::1 at 2020-07-12 19:31:47 -0400
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY "teams"."name" ASC[0m
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.2ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.2ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.2ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+Completed 200 OK in 74ms (Views: 0.1ms | ActiveRecord: 1.8ms | Allocations: 35280)
+
+
+Started GET "/leagues/1/teams/13" for ::1 at 2020-07-12 19:31:50 -0400
+Processing by TeamsController#show as */*
+  Parameters: {"league_id"=>"1", "id"=>"13"}
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:51:in `set_team'
+  [1m[36mLeague Load (0.4ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:15:in `show'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 1756)
+
+
+Started GET "/leagues" for ::1 at 2020-07-12 19:31:51 -0400
+Processing by LeaguesController#index as */*
+  [1m[36mLeague Load (0.2ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."start_date" ASC[0m
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 1]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 2]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 3]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 4]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 5]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 55]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 56]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 57]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 58]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 59]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 7]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 65]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 64]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 61]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 62]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 63]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 54]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 60]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+Completed 200 OK in 37ms (Views: 33.8ms | ActiveRecord: 2.7ms | Allocations: 26249)
+
+
+Started GET "/teams" for ::1 at 2020-07-12 19:31:52 -0400
+Processing by TeamsController#index as */*
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY "teams"."name" ASC[0m
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.2ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.2ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.9ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.2ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+Completed 200 OK in 73ms (Views: 0.2ms | ActiveRecord: 2.6ms | Allocations: 35280)
+
+
+Started GET "/leagues" for ::1 at 2020-07-12 19:31:54 -0400
+Processing by LeaguesController#index as */*
+  [1m[36mLeague Load (0.7ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."start_date" ASC[0m
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 1]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 2]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 3]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 4]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 5]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 55]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 56]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 57]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 58]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 59]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 7]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 65]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 64]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 61]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 62]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 63]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 54]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 60]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+Completed 200 OK in 36ms (Views: 32.9ms | ActiveRecord: 3.1ms | Allocations: 26249)
+
+
+Started GET "/leagues" for ::1 at 2020-07-12 19:32:31 -0400
+Processing by LeaguesController#index as */*
+  [1m[36mLeague Load (0.2ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" ORDER BY "leagues"."start_date" ASC[0m
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 1]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 2]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 3]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 4]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 5]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 55]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 56]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 57]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 58]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 59]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 7]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 65]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 64]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 61]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 62]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 63]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 54]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."league_id" = ?[0m  [["league_id", 60]]
+  ↳ app/controllers/leagues_controller.rb:8:in `index'
+Completed 200 OK in 45ms (Views: 42.0ms | ActiveRecord: 2.9ms | Allocations: 26252)
+
+
+Started GET "/teams" for ::1 at 2020-07-12 19:35:05 -0400
+Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY "teams"."name" ASC[0m
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.2ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+Completed 200 OK in 35ms (Views: 0.1ms | ActiveRecord: 1.3ms | Allocations: 35275)
+
+
+Started GET "/favicon.ico" for ::1 at 2020-07-12 19:35:06 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/teams" for ::1 at 2020-07-12 19:37:11 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY "teams"."name" ASC[0m
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+Completed 200 OK in 64ms (Views: 0.1ms | ActiveRecord: 2.3ms | Allocations: 46821)
+
+
+Started GET "/favicon.ico" for ::1 at 2020-07-12 19:37:11 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/teams" for ::1 at 2020-07-12 19:37:31 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY "teams"."name" ASC[0m
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.2ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.2ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+Completed 200 OK in 66ms (Views: 0.1ms | ActiveRecord: 2.6ms | Allocations: 45700)
+
+
+Started GET "/favicon.ico" for ::1 at 2020-07-12 19:37:31 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/teams" for ::1 at 2020-07-12 19:38:01 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TeamsController#index as HTML
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" ORDER BY "teams"."name" ASC[0m
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+  [1m[36mCACHE League Load (0.0ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:8:in `index'
+Completed 200 OK in 52ms (Views: 0.1ms | ActiveRecord: 2.6ms | Allocations: 45716)
+
+
+Started GET "/favicon.ico" for ::1 at 2020-07-12 19:38:01 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/teams/1" for ::1 at 2020-07-12 19:38:05 -0400
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:52:in `set_team'
+  [1m[36mLeague Load (0.1ms)[0m  [1m[34mSELECT "leagues".* FROM "leagues" WHERE "leagues"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:16:in `show'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1706)
+
+

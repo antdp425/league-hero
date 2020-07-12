@@ -101,8 +101,8 @@ class League{
                   <h5 class="card-title">Light card title</h5>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                   <br>
-                  <button class="btn btn-info">Edit League</button>
-                  <button class="btn btn-danger">Delete League</button>
+                  <button class="btn btn-info" data-league-id="${this.id}>Edit League</button>
+                  <button class="btn btn-danger" data-league-id="${this.id}>Delete League</button>
                </div>
          </div>
       </div>
