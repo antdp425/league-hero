@@ -33,34 +33,47 @@ class League{
             let l = new League(league)
             leagueRow.innerHTML += l.renderLeagueShort()
          })
+
+         this.addListeners()
+
       })
    }
 
-   // static getTeam(leagueId, teamId){
-   //    fetch(`${baseURL}/leagues/${leagueId}/teams/${teamId}`)
-   //    .then (resp =>  resp.json())
-   //    .then (teams => {         
-   //       container.innerHTML = ""
-   //       let actionRow = document.createElement("div")
-   //       let teamRow = document.createElement("div")
+   static addListeners(){
+      let leagues = document.querySelector("#league-rows")
+      leagues.addEventListener("click",()=>{      
+         if (!!(event.target.dataset.leagueId)){   
+         let leagueId = event.target.dataset.leagueId
+         this.getLeague(leagueId)
+         }
+      })
+   }
+
+   static getLeague(leagueId){
+      fetch(`${baseURL}/leagues/${leagueId}`)
+      .then (resp =>  resp.json())
+      .then (leagues => {         
+         container.innerHTML = ""
+         let actionRow = document.createElement("div")
+         let leagueRow = document.createElement("div")
          
-   //       actionRow.id = "action-row"
-   //       actionRow.className = "row"
+         actionRow.id = "action-row"
+         actionRow.className = "row"
          
-   //       teamRow.id = "team-rows"
-   //       teamRow.classList.add("row","justify-content-center")
-   //       teamRow.innerHTML = ""
+         leagueRow.id = "league-rows"
+         leagueRow.classList.add("row","justify-content-center")
+         leagueRow.innerHTML = ""
          
-   //       container.appendChild(actionRow)
-   //       container.appendChild(teamRow)
+         container.appendChild(actionRow)
+         container.appendChild(leagueRow)
          
-   //       let t = new Team(teams)
-   //       teamRow.innerHTML += t.renderTeam()
+         let l = new League(leagues)
+         leagueRow.innerHTML += l.renderLeague()
          
    //       this.addListeners()
          
-   //    })
-   // }
+      })
+   }
 
    renderLeagueShort(){
       League.store.call(this)
@@ -68,9 +81,9 @@ class League{
       return `
       <div class="col-xs-10 col-sm-6 col-md-4">
          <div class="card bg-light mb-3">
-            <a href="#" data-league-id="${this.id}">
-               <div class="card-header">${this.name}</div>
-            </a>
+            <div class="card-header">
+            <a href="#" data-league-id="${this.id}">${this.name}</a>
+            </div>
                <div class="card-body">
                   <h5 class="card-title">Light card title</h5>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -84,7 +97,7 @@ class League{
       League.store.call(this)
       
       return `
-      <div class="col-xs-10 col-sm-6 col-md-4">
+      <div class="col-12">
          <div class="card bg-light mb-3">
             <div class="card-header">${this.name}</div>
                <div class="card-body">
