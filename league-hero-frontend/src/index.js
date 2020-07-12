@@ -29,6 +29,8 @@ class Team{
       this.email = teamInfo.email
       this.phone = teamInfo.phone
       this.paid = teamInfo.paid
+      this.league_id = teamInfo.league_id
+      this.league = teamInfo.league.name
    }
 
    static getTeams(){
@@ -50,9 +52,6 @@ class Team{
          container.appendChild(actionRow)
          container.appendChild(teamRow)
 
-         // actionRow.innerHTML += this.newLeagueButton()
-         // this.newLeagueListener()
-
          teams.forEach(team => {
             let t = new Team(team)
             teamRow.innerHTML += t.renderTeam()
@@ -62,14 +61,14 @@ class Team{
 
    renderTeam(){
       return `
-      <div class="col-xs-10 col-sm-6 col-md-4">
-         <div class="card bg-light mb-3">
-            <div class="card-header">${this.name}</div>
-               <div class="card-body">
-                  <h5 class="card-title">Light card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <div class="col-10">
+            <div class="card bg-light mb-3">
+               <div class="card-header align-middle">${this.name}
+                  <span>
+                     <a href="#" data-league-id="${this.league_id}" class=" badge badge-dark float-right">${this.league}</a>
+                  </span>
                </div>
-         </div>
+            </div>
       </div>
       `
    }
