@@ -11,8 +11,8 @@ class TeamsController < ApplicationController
 
   # GET /teams/1
   def show
-    render json: @team
-  end
+    render json: @team.to_json(:include => {
+      :league => {:only => [:name]}})  end
 
   # POST /teams
   def create

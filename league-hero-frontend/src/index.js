@@ -29,6 +29,7 @@ class Team{
       this.email = teamInfo.email
       this.phone = teamInfo.phone
       this.paid = teamInfo.paid
+      this.team_id = teamInfo.id
       this.league_id = teamInfo.league_id
       this.league = teamInfo.league.name
    }
@@ -54,19 +55,89 @@ class Team{
 
          teams.forEach(team => {
             let t = new Team(team)
-            teamRow.innerHTML += t.renderTeam()
+            teamRow.innerHTML += t.renderTeamShort()
          })
+
+         this.addListeners()
+
       })
+   }
+
+   
+   static getTeam(teamId){
+      fetch(`${baseURL}/teams/${teamId}`)
+      .then (resp =>  resp.json())
+      .then (teams => {         
+         container.innerHTML = ""
+         let actionRow = document.createElement("div")
+         let teamRow = document.createElement("div")
+         
+         actionRow.id = "action-row"
+         actionRow.className = "row"
+         
+         teamRow.id = "team-rows"
+         teamRow.classList.add("row","justify-content-center")
+         teamRow.innerHTML = ""
+         
+         container.appendChild(actionRow)
+         container.appendChild(teamRow)
+         
+         let t = new Team(teams)
+         teamRow.innerHTML += t.renderTeam()
+         
+         this.addListeners()
+         
+      })
+   }
+
+   static addListeners(){
+      let teams = document.querySelector("#team-rows")
+      teams.addEventListener("click",()=>{
+         console.log(event.target.dataset)
+         switch (true) {
+            case !!event.target.dataset.teamId:
+               let teamId = event.target.dataset.teamId
+               Team.getTeam(teamId)
+               break;
+            case !!event.target.dataset.leagueId:
+               // Team.getTeams()
+               console.log("Its a league")
+               break;
+         }
+      })
+   }
+   
+   renderTeamShort(){
+      return `
+      <div class="col-10">
+            <div class="card bg-light mb-3">
+               <div class="card-header align-middle">
+               <a href="#" data-team-id="${this.team_id}">${this.name}</a>
+                     <span>
+                        <a href="#" data-league-id="${this.league_id}" class=" badge badge-dark float-right">${this.league}</a>
+                     </span>
+               </div>
+            </div>
+      </div>
+      `
    }
 
    renderTeam(){
       return `
       <div class="col-10">
             <div class="card bg-light mb-3">
-               <div class="card-header align-middle">${this.name}
-                  <span>
-                     <a href="#" data-league-id="${this.league_id}" class=" badge badge-dark float-right">${this.league}</a>
-                  </span>
+               <div class="card-header align-middle">
+               <a href="#" data-team-id="${this.team_id}">${this.name}</a>
+                     <span>
+                        <a href="#" data-league-id="${this.league_id}" class=" badge badge-dark float-right">${this.league}</a>
+                     </span>
+               </div>
+                  <div class="card-body">
+                  <div class="card-text"><i class="fas fa-envelope"></i> ${this.email}</div>
+                  <div class="card-text"><i class="fas fa-mobile"></i> ${this.phone}</div>
+                  <br>
+                  <button class="btn btn-info">Edit Team</button>
+                  <button class="btn btn-danger">Delete Team</button>
                </div>
             </div>
       </div>
