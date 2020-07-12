@@ -19,14 +19,16 @@ class TeamsController < ApplicationController
 
   # POST /teams
   def create
-    binding.pry
-    # team = Team.new(team_params)
+    team = Team.new(team_params)
 
-    # if team.save
-    #   render json: team, status: :created, location: team
-    # else
-    #   render json: team.errors, status: :unprocessable_entity
-    # end
+    if team.save
+      render json: team.to_json(:include => {
+        :league => {:only => [:name, :league_format]}
+        }), 
+        status: :created, location: team
+    else
+      render json: team.errors, status: :unprocessable_entity
+    end
   end
 
   # PATCH/PUT /teams/1

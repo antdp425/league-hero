@@ -30,13 +30,14 @@ class League{
 
          leagues.forEach(league => {
             let l = new League(league)
-            leagueRow.innerHTML += l.renderLeague()
+            leagueRow.innerHTML += l.renderLeagueShort()
          })
       })
    }
 
-   renderLeague(){
+   renderLeagueShort(){
       League.store.call(this)
+
       return `
       <div class="col-xs-10 col-sm-6 col-md-4">
          <div class="card bg-light mb-3">
@@ -44,6 +45,25 @@ class League{
                <div class="card-body">
                   <h5 class="card-title">Light card title</h5>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+               </div>
+         </div>
+      </div>
+      `
+   }
+
+   renderLeague(){
+      League.store.call(this)
+      
+      return `
+      <div class="col-xs-10 col-sm-6 col-md-4">
+         <div class="card bg-light mb-3">
+            <div class="card-header">${this.name}</div>
+               <div class="card-body">
+                  <h5 class="card-title">Light card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <br>
+                  <button class="btn btn-info">Edit League</button>
+                  <button class="btn btn-danger">Delete League</button>
                </div>
          </div>
       </div>

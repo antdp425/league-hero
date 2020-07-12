@@ -61,7 +61,6 @@ class Team{
       })
    }
 
-   //Team.leagues.forEach(league => container.innerHTML += `<h5>${league.league_name}</h5>`)
    static newTeamForm(){
       return `      
          <form>
@@ -97,40 +96,41 @@ class Team{
       let form = document.querySelector("form")
       form.addEventListener("submit", () => {
          event.preventDefault()
-         // this.createTeam()
+         this.createTeam()
          form.parentNode.removeChild(form)
       })
    }
 
-   // static createTeam(){
-   //    let form = event.target
+   static createTeam(){
+      console.log("You're about to create a team")
+      let form = event.target
 
-   //    let formData = {
-   //       name: form[0].value,
-   //       email: form[1].value,
-   //       phone: form[2].value,
-   //       //add league selector
-   //    }
+      let formData = {
+         name: form[0].value,
+         league_id: form[1].value,
+         email: form[2].value,
+         phone: form[3].value
+      }
 
-   //    let configObj = {
-   //       method: "POST",
-   //       headers: {
-   //          "Content-Type": "application/json",
-   //          "Accept": "application/json"
-   //        },
-   //        body: JSON.stringify(formData)
-   //    }
+      let configObj = {
+         method: "POST",
+         headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+          },
+          body: JSON.stringify(formData)
+      }
 
-   //    fetch(`${baseURL}/leagues`, configObj)
-   //    .then(resp => resp.json())
-   //    .then(created => {
-   //       let leagueRow = document.querySelector("#league-rows")
+      fetch(`${baseURL}/teams`, configObj)
+      .then(resp => resp.json())
+      .then(created => {
+         let teamRow = document.querySelector("#team-rows")
 
-   //       let l = new League(created)
-   //       leagueRow.innerHTML = ""
-   //       leagueRow.innerHTML += l.renderLeague()
-   //    })
-   // }
+         let t = new Team(created)
+         teamRow.innerHTML = ""
+         teamRow.innerHTML += t.renderTeam()
+      })
+   }
 
 
    static getTeam(leagueId, teamId){
@@ -193,13 +193,11 @@ class Team{
 
    renderTeam(){
       return `
-      <div class="col-10">
+      <div class="col">
             <div class="card bg-light mb-3">
                <div class="card-header align-middle">
                <a href="#" data-team-id="${this.team_id}">${this.name}</a>
-                     <span>
-                        <a href="#" data-league-id="${this.league_id}" class=" badge badge-dark float-right">${this.league}</a>
-                     </span>
+                     <a href="#" data-league-id="${this.league_id}" class=" badge badge-dark float-right">${this.league}</a>
                </div>
                   <div class="card-body">
                   <div class="card-text"><i class="fas fa-envelope"></i> ${this.email}</div>
