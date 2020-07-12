@@ -38,7 +38,6 @@ class Team{
       fetch(`${baseURL}/teams`)
       .then (resp =>  resp.json())
       .then (teams => {         
-         let container = document.querySelector(".container-fluid")
          container.innerHTML = ""
          let actionRow = document.createElement("div")
          let teamRow = document.createElement("div")
@@ -63,9 +62,8 @@ class Team{
       })
    }
 
-   
-   static getTeam(teamId){
-      fetch(`${baseURL}/teams/${teamId}`)
+   static getTeam(leagueId, teamId){
+      fetch(`${baseURL}/leagues/${leagueId}/teams/${teamId}`)
       .then (resp =>  resp.json())
       .then (teams => {         
          container.innerHTML = ""
@@ -93,11 +91,11 @@ class Team{
    static addListeners(){
       let teams = document.querySelector("#team-rows")
       teams.addEventListener("click",()=>{
-         console.log(event.target.dataset)
          switch (true) {
             case !!event.target.dataset.teamId:
+               let leagueId = event.target.nextElementSibling.firstElementChild.dataset.leagueId
                let teamId = event.target.dataset.teamId
-               Team.getTeam(teamId)
+               Team.getTeam(leagueId, teamId)
                break;
             case !!event.target.dataset.leagueId:
                // Team.getTeams()

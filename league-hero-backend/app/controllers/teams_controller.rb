@@ -6,13 +6,16 @@ class TeamsController < ApplicationController
     teams = Team.all.order(name: :asc)
 
     render json: teams.to_json(:include => {
-      :league => {:only => [:name]}})
+      :league => {:only => [:name, :league_format]}
+      })
   end
 
   # GET /teams/1
   def show
     render json: @team.to_json(:include => {
-      :league => {:only => [:name]}})  end
+      :league => {:only => [:name, :league_format]}
+      })  
+    end
 
   # POST /teams
   def create

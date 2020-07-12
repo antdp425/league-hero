@@ -10,7 +10,6 @@ class League{
       fetch(`${baseURL}/leagues`)
       .then (resp =>  resp.json())
       .then (leagues => {
-         let container = document.querySelector(".container-fluid")
          let actionRow = document.createElement("div")
          let leagueRow = document.createElement("div")
 
