@@ -1,5 +1,7 @@
 class League{
+   static all = []
    constructor(leagueInfo){
+      this.id = leagueInfo.id
       this.name = leagueInfo.name
       this.league_format = leagueInfo.league_format
       this.start_date = leagueInfo.start_date
@@ -34,6 +36,7 @@ class League{
    }
 
    renderLeague(){
+      League.store.call(this)
       return `
       <div class="col-xs-10 col-sm-6 col-md-4">
          <div class="card bg-light mb-3">
@@ -132,5 +135,11 @@ class League{
          leagueRow.innerHTML = ""
          leagueRow.innerHTML += l.renderLeague()
       })
+   }
+
+   static store(){
+      League.all.findIndex(league => league.id === this.id) === -1 ?
+      League.all.push({id: this.id, name: this.name}) : 
+      false
    }
 }

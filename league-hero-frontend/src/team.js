@@ -1,5 +1,5 @@
 class Team{
-   static leagues = []
+   // static leagues = []
    constructor(teamInfo){
       this.name = teamInfo.name
       this.email = teamInfo.email
@@ -90,7 +90,7 @@ class Team{
 
    static createLeagueOptions(){
       const sel = document.querySelector("#league_id")
-      this.leagues.forEach(league => sel.innerHTML += `<option value="${league.league_id}">${league.league_name}</option>`)
+      League.all.forEach(league => sel.innerHTML += `<option value="${league.id}">${league.name}</option>`)
    }
 
    static createTeamListener(){
@@ -177,9 +177,6 @@ class Team{
    }
    
    renderTeamShort(){
-
-      Team.store.call(this)
-
       return `
       <div class="col-12">
             <div class="card bg-light mb-3">
@@ -216,9 +213,9 @@ class Team{
       `
    }
 
-   static store(){
-      Team.leagues.findIndex(league => league.league_id === this.league_id) === -1 ?
-      Team.leagues.push({league_id: this.league_id, league_name: this.league}) : 
-      false
-   }
+   // static store(){
+   //    Team.leagues.findIndex(league => league.league_id === this.league_id) === -1 ?
+   //    Team.leagues.push({league_id: this.league_id, league_name: this.league}) : 
+   //    false
+   // }
 }
