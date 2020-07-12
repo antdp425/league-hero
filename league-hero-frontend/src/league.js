@@ -68,10 +68,7 @@ class League{
          container.appendChild(leagueRow)
          
          let l = new League(leagues)
-         leagueRow.innerHTML += l.renderLeague()
-         
-   //       this.addListeners()
-         
+         leagueRow.innerHTML += l.renderLeague()         
       })
    }
 
