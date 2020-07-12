@@ -17,3 +17,8 @@ form{
    text-decoration: none;
 }
 
+.card a[data-league-id]{
+   color: black;
+   text-decoration: none;
+}
+

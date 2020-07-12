@@ -6,6 +6,7 @@ class League{
       this.league_format = leagueInfo.league_format
       this.start_date = leagueInfo.start_date
       this.end_date = leagueInfo.end_date
+      this.teams = leagueInfo.teams
    }
 
    static getLeagues(){
@@ -35,13 +36,41 @@ class League{
       })
    }
 
+   // static getTeam(leagueId, teamId){
+   //    fetch(`${baseURL}/leagues/${leagueId}/teams/${teamId}`)
+   //    .then (resp =>  resp.json())
+   //    .then (teams => {         
+   //       container.innerHTML = ""
+   //       let actionRow = document.createElement("div")
+   //       let teamRow = document.createElement("div")
+         
+   //       actionRow.id = "action-row"
+   //       actionRow.className = "row"
+         
+   //       teamRow.id = "team-rows"
+   //       teamRow.classList.add("row","justify-content-center")
+   //       teamRow.innerHTML = ""
+         
+   //       container.appendChild(actionRow)
+   //       container.appendChild(teamRow)
+         
+   //       let t = new Team(teams)
+   //       teamRow.innerHTML += t.renderTeam()
+         
+   //       this.addListeners()
+         
+   //    })
+   // }
+
    renderLeagueShort(){
       League.store.call(this)
 
       return `
       <div class="col-xs-10 col-sm-6 col-md-4">
          <div class="card bg-light mb-3">
-            <div class="card-header">${this.name}</div>
+            <a href="#" data-league-id="${this.id}">
+               <div class="card-header">${this.name}</div>
+            </a>
                <div class="card-body">
                   <h5 class="card-title">Light card title</h5>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -159,7 +188,7 @@ class League{
 
    static store(){
       League.all.findIndex(league => league.id === this.id) === -1 ?
-      League.all.push({id: this.id, name: this.name}) : 
-      false
+         League.all.push(this) : 
+            false
    }
 }
