@@ -19,13 +19,14 @@ class TeamsController < ApplicationController
 
   # POST /teams
   def create
-    team = Team.new(team_params)
+    binding.pry
+    # team = Team.new(team_params)
 
-    if team.save
-      render json: team, status: :created, location: team
-    else
-      render json: team.errors, status: :unprocessable_entity
-    end
+    # if team.save
+    #   render json: team, status: :created, location: team
+    # else
+    #   render json: team.errors, status: :unprocessable_entity
+    # end
   end
 
   # PATCH/PUT /teams/1

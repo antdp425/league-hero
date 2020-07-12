@@ -1,4 +1,5 @@
 class Team{
+   static leagues = []
    constructor(teamInfo){
       this.name = teamInfo.name
       this.email = teamInfo.email
@@ -83,10 +84,40 @@ class Team{
       let form = document.querySelector("form")
       form.addEventListener("submit", () => {
          event.preventDefault()
-         // this.createLeague()
+         // this.createTeam()
          form.parentNode.removeChild(form)
       })
    }
+
+   // static createTeam(){
+   //    let form = event.target
+
+   //    let formData = {
+   //       name: form[0].value,
+   //       email: form[1].value,
+   //       phone: form[2].value,
+   //       //add league selector
+   //    }
+
+   //    let configObj = {
+   //       method: "POST",
+   //       headers: {
+   //          "Content-Type": "application/json",
+   //          "Accept": "application/json"
+   //        },
+   //        body: JSON.stringify(formData)
+   //    }
+
+   //    fetch(`${baseURL}/leagues`, configObj)
+   //    .then(resp => resp.json())
+   //    .then(created => {
+   //       let leagueRow = document.querySelector("#league-rows")
+
+   //       let l = new League(created)
+   //       leagueRow.innerHTML = ""
+   //       leagueRow.innerHTML += l.renderLeague()
+   //    })
+   // }
 
 
    static getTeam(leagueId, teamId){
@@ -133,6 +164,9 @@ class Team{
    }
    
    renderTeamShort(){
+
+      Team.store.call(this)
+
       return `
       <div class="col-12">
             <div class="card bg-light mb-3">
@@ -167,5 +201,11 @@ class Team{
             </div>
       </div>
       `
+   }
+
+   static store(){
+      Team.leagues.findIndex(league => league.league_id === this.league_id) === -1 ?
+      Team.leagues.push({league_id: this.league_id, league_name: this.league}) : 
+      false
    }
 }
