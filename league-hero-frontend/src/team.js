@@ -55,17 +55,25 @@ class Team{
          if (document.querySelector("form")){
          } else {
             event.target.parentElement.insertAdjacentHTML("beforeend",(this.newTeamForm()))
+            this.createLeagueOptions()
             this.createTeamListener()
          }
       })
    }
 
+   //Team.leagues.forEach(league => container.innerHTML += `<h5>${league.league_name}</h5>`)
    static newTeamForm(){
       return `      
          <form>
             <div class="form-group">
                <label for="team_name">Team Name:</label>
                <input type="text" class="form-control" name="team_name" id="team_name">
+            </div>
+            <div class="form-group">
+               <label for="league_id">League:</label>
+               <select class="form-control" name="league_format" id="league_id" required>
+                  <option value="">--Select a League Format --</option>
+               </select>
             </div>
             <div class="form-group">
                <label for="email">Email:</label>
@@ -78,6 +86,11 @@ class Team{
             <button type="submit" class="btn btn-primary">Submit</button>
          </form>
       `
+   }
+
+   static createLeagueOptions(){
+      const sel = document.querySelector("#league_id")
+      this.leagues.forEach(league => sel.innerHTML += `<option value="${league.league_id}">${league.league_name}</option>`)
    }
 
    static createTeamListener(){
@@ -153,7 +166,7 @@ class Team{
             case !!event.target.dataset.teamId:               
                let leagueId = event.target.nextElementSibling.firstElementChild.dataset.leagueId
                let teamId = event.target.dataset.teamId
-               Team.getTeam(leagueId, teamId)
+               this.getTeam(leagueId, teamId)
                break;
             case !!event.target.dataset.leagueId:
                // Team.getTeams()
