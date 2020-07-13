@@ -168,9 +168,10 @@ class Team{
          let teamId = event.target.dataset.teamId
          switch (true) {
             case event.target.dataset.action === "edit":
-               console.log(`Its an edit for ${teamId}`)
+               if (document.querySelector("form")){                  
+               } else {
                event.target.parentElement.parentElement.parentElement.parentElement.parentElement.insertAdjacentHTML("beforeend",this.editTeamForm())
-               this.updateTeamListener()
+               this.updateTeamListener()}
                break;
             case event.target.dataset.action === "delete":
                Team.deleteTeam(teamId)
