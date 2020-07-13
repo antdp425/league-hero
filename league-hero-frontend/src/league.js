@@ -13,6 +13,7 @@ class League{
       fetch(`${baseURL}/leagues`)
       .then (resp =>  resp.json())
       .then (leagues => {
+         container.innerHTML = ""
          let actionRow = document.createElement("div")
          let leagueRow = document.createElement("div")
 
@@ -68,7 +69,47 @@ class League{
          container.appendChild(leagueRow)
          
          let l = new League(leagues)
-         leagueRow.innerHTML += l.renderLeague()         
+         leagueRow.innerHTML += l.renderLeague() 
+         
+         this.addActionListeners()
+
+      })
+   }
+
+   static addActionListeners(){
+      let actions = document.querySelector(".action-buttons")
+      actions.addEventListener("click",()=>{
+         let leagueId = event.target.dataset.leagueId
+         switch (true) {
+            case event.target.dataset.action === "edit":
+               console.log("Its an edit")
+               // let leagueId = event.target.nextElementSibling.firstElementChild.dataset.leagueId
+               // let teamId = event.target.dataset.teamId
+               // this.getTeam(leagueId, teamId)
+               break;
+            case event.target.dataset.action === "delete":
+               League.deleteLeague(leagueId)
+               console.log("Its a delete")
+               break;
+         }
+      })
+   }
+
+   static deleteLeague(leagueId){
+      let el = document.querySelector(`[data-league-id="${leagueId}"]`).parentElement.parentElement.parentElement
+
+      let configObj = {
+         method: "DELETE",
+         headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+          }
+      }
+
+      fetch(`${baseURL}/leagues/${leagueId}`, configObj)
+      .then(()=>{
+         this.getLeagues()
+         el.remove()
       })
    }
 
@@ -101,8 +142,10 @@ class League{
                   <h5 class="card-title">Light card title</h5>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                   <br>
-                  <button class="btn btn-info" data-league-id="${this.id}>Edit League</button>
-                  <button class="btn btn-danger" data-league-id="${this.id}>Delete League</button>
+                  <div class="action-buttons">
+                     <button class="btn btn-info" data-league-id="${this.id}" data-action="edit">Edit League</button>
+                     <button class="btn btn-danger" data-league-id="${this.id}" data-action="delete">Delete League</button>
+                  </div>
                </div>
          </div>
       </div>

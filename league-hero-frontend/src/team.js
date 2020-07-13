@@ -154,10 +154,9 @@ class Team{
          let t = new Team(teams)
          teamRow.innerHTML += t.renderTeam()
          
-         this.addListeners()
+         // this.addListeners()
          this.addActionListeners()
-         
-         
+
       })
    }
 
