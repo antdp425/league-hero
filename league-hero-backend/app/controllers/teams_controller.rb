@@ -35,7 +35,9 @@ class TeamsController < ApplicationController
   # PATCH/PUT /teams/1
   def update
     if @team.update(team_params)
-      render json: @team
+      render json: @team.to_json(:include => {
+        :league => {:only => [:name, :league_format]}}), 
+        status: :created, location: @team
     else
       render json: @team.errors, status: :unprocessable_entity
     end

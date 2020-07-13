@@ -87,36 +87,12 @@ class Team{
       `
    }
 
-   static updateTeamForm(){
-      let teamData = {
-         name: document.querySelector("#team_name").innerText ,
-         email: document.querySelector("#team_email").innerText ,
-         phone: document.querySelector("#team_phone").innerText
-      }
-      return `      
-         <form>
-            <div class="form-group">
-               <label for="team_name">Team Name:</label>
-               <input type="text" class="form-control" name="team_name" id="team_name" value="${teamData.name}">
-            </div>
-            <div class="form-group">
-               <label for="email">Email:</label>
-               <input type="email" class="form-control" name="email" id="team_email" value="${teamData.email}">
-            </div>
-            <div class="form-group">
-            <label for="phone">Phone:</label>
-            <input type="text" class="form-control" name="phone" id="team_phone" maxlength="10" value="${teamData.phone}">
-         </div>
-            <button type="submit" class="btn btn-block btn-primary">Update</button>
-         </form>
-      `
-   }
-
+   
    static createLeagueOptions(){
       const sel = document.querySelector("#league_id")
       League.all.forEach(league => sel.innerHTML += `<option value="${league.id}">${league.name}</option>`)
    }
-
+   
    static createTeamListener(){
       let form = document.querySelector("form")
       form.addEventListener("submit", () => {
@@ -125,39 +101,39 @@ class Team{
          form.parentNode.removeChild(form)
       })
    }
-
+   
    static createTeam(){
       console.log("You're about to create a team")
       let form = event.target
-
+      
       let formData = {
          name: form[0].value,
          league_id: form[1].value,
          email: form[2].value,
          phone: form[3].value
       }
-
+      
       let configObj = {
          method: "POST",
          headers: {
             "Content-Type": "application/json",
             "Accept": "application/json"
-          },
-          body: JSON.stringify(formData)
+         },
+         body: JSON.stringify(formData)
       }
-
+      
       fetch(`${baseURL}/teams`, configObj)
       .then(resp => resp.json())
       .then(created => {
          let teamRow = document.querySelector("#team-rows")
-
+         
          let t = new Team(created)
          teamRow.innerHTML = ""
          teamRow.innerHTML += t.renderTeam()
       })
    }
-
-
+   
+   
    static getTeam(leagueId, teamId){
       fetch(`${baseURL}/leagues/${leagueId}/teams/${teamId}`)
       .then (resp =>  resp.json())
@@ -181,10 +157,93 @@ class Team{
          
          // this.addListeners()
          this.addActionListeners()
+         
+      })
 
+   }
+
+   static addActionListeners(){
+      let actions = document.querySelector(".action-buttons")
+      actions.addEventListener("click",()=>{
+         let teamId = event.target.dataset.teamId
+         switch (true) {
+            case event.target.dataset.action === "edit":
+               console.log(`Its an edit for ${teamId}`)
+               event.target.parentElement.parentElement.parentElement.parentElement.parentElement.insertAdjacentHTML("beforeend",this.editTeamForm())
+               this.updateTeamListener()
+               break;
+            case event.target.dataset.action === "delete":
+               Team.deleteTeam(teamId)
+               console.log("Its a delete")
+               break;
+         }
       })
    }
 
+   static editTeamForm(){
+      let teamData = {
+         id: document.querySelector("[data-team-id]").dataset.teamId,
+         name: document.querySelector("#team_name").innerText ,
+         email: document.querySelector("#team_email").innerText ,
+         phone: document.querySelector("#team_phone").innerText
+      }
+      return `      
+         <form>
+            <div class="form-group">
+               <label for="team_name">Team Name:</label>
+               <input type="text" class="form-control" name="team_name" id="team_name" value="${teamData.name}">
+            </div>
+            <div class="form-group">
+               <label for="email">Email:</label>
+               <input type="email" class="form-control" name="email" id="team_email" value="${teamData.email}">
+            </div>
+            <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input type="text" class="form-control" name="phone" id="team_phone" maxlength="10" value="${teamData.phone}">
+         </div>
+            <button type="submit" class="btn btn-block btn-primary" data-team-id="${teamData.id}" id="update">Update</button>
+         </form>
+      `
+   }
+
+   static updateTeamListener(){
+      let button = document.querySelector("#update")
+      button.addEventListener("click", () => {
+         event.preventDefault()
+         this.updateTeam(event.target.dataset.teamId)
+         button.parentNode.removeChild(button)
+   })
+}
+
+   static updateTeam(teamId){
+      console.log(`You passed in ${teamId}`);
+      let form = event.target.parentElement
+      let formData = {
+         name: form[0].value,
+         email: form[1].value,
+         phone: form[2].value
+      }
+
+      let configObj = {
+         method: "PATCH",
+         headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+         },
+         body: JSON.stringify(formData)
+      }
+      
+      fetch(`${baseURL}/teams/${teamId}`, configObj)
+      .then(resp => resp.json())
+      .then(created => {
+         let teamRow = document.querySelector("#team-rows")
+         
+         let t = new Team(created)
+         teamRow.innerHTML = ""
+         teamRow.innerHTML += t.renderTeam()
+      })
+   }
+   
    static deleteTeam(teamId){
       let el = document.querySelector(`[data-team-id="${teamId}"]`).parentElement.parentElement.parentElement
       let configObj = {
@@ -192,9 +251,9 @@ class Team{
          headers: {
             "Content-Type": "application/json",
             "Accept": "application/json"
-          }
+         }
       }
-
+      
       fetch(`${baseURL}/teams/${teamId}`, configObj)
       .then(()=>{
          this.getTeams()
@@ -220,25 +279,6 @@ class Team{
       })
    }
 
-   static addActionListeners(){
-      let actions = document.querySelector(".action-buttons")
-      actions.addEventListener("click",()=>{
-         let teamId = event.target.dataset.teamId
-         switch (true) {
-            case event.target.dataset.action === "edit":
-               console.log("Its an edit")
-               event.target.parentElement.parentElement.parentElement.parentElement.parentElement.insertAdjacentHTML("beforeend",this.updateTeamForm())
-               // let leagueId = event.target.nextElementSibling.firstElementChild.dataset.leagueId
-               // let teamId = event.target.dataset.teamId
-               // this.getTeam(leagueId, teamId)
-               break;
-            case event.target.dataset.action === "delete":
-               Team.deleteTeam(teamId)
-               console.log("Its a delete")
-               break;
-         }
-      })
-   }
    
    renderTeamShort(){
       return `
