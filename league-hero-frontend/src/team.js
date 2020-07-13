@@ -161,6 +161,7 @@ class Team{
    }
 
    static deleteTeam(teamId){
+      let el = document.querySelector(`[data-team-id="${teamId}"]`).parentElement.parentElement.parentElement
       let configObj = {
          method: "DELETE",
          headers: {
@@ -170,7 +171,10 @@ class Team{
       }
 
       fetch(`${baseURL}/teams/${teamId}`, configObj)
-      .then(this.getTeams())
+      .then(()=>{
+         this.getTeams()
+         el.remove()
+      })
    }
 
    static addListeners(){
