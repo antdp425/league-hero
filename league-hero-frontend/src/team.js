@@ -82,7 +82,7 @@ class Team{
             <label for="phone">Phone:</label>
             <input type="text" class="form-control" name="phone" id="team_phone" maxlength="10">
          </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-block btn-primary">Submit</button>
          </form>
       `
    }

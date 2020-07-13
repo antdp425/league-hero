@@ -8,8 +8,14 @@
    padding-bottom: 10px;
 } 
 
-form{
-   padding-top: 15px;
+form {
+   padding: 15px;
+   width: 100%;
+   background-color: rgba(236, 236, 236, 0.897);
+}
+
+form button{
+   margin-bottom: 15px;
 }
 
 .card a[data-team-id]{

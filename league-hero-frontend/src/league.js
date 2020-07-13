@@ -88,7 +88,7 @@ class League{
                // this.getTeam(leagueId, teamId)
                break;
             case event.target.dataset.action === "delete":
-               League.deleteLeague(leagueId)
+               this.deleteLeague(leagueId)
                console.log("Its a delete")
                break;
          }
@@ -161,7 +161,7 @@ class League{
    static newLeagueForm(){
       return `      
          <form>
-            <div class="form-group">
+            <div class="form-group>
                <label for="leage_name">League Name:</label>
                <input type="text" class="form-control" name="league_name" id="league_name">
             </div>
@@ -183,7 +183,7 @@ class League{
             <label for="end_date">End Date:</label>
             <input type="date" class="form-control" name="end_date" id="end_date" min="${tomorrow}">
          </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
          </form>
       `
    }
