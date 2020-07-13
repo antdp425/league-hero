@@ -87,6 +87,31 @@ class Team{
       `
    }
 
+   static updateTeamForm(){
+      let teamData = {
+         name: document.querySelector("#team_name").innerText ,
+         email: document.querySelector("#team_email").innerText ,
+         phone: document.querySelector("#team_phone").innerText
+      }
+      return `      
+         <form>
+            <div class="form-group">
+               <label for="team_name">Team Name:</label>
+               <input type="text" class="form-control" name="team_name" id="team_name" value="${teamData.name}">
+            </div>
+            <div class="form-group">
+               <label for="email">Email:</label>
+               <input type="email" class="form-control" name="email" id="team_email" value="${teamData.email}">
+            </div>
+            <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input type="text" class="form-control" name="phone" id="team_phone" maxlength="10" value="${teamData.phone}">
+         </div>
+            <button type="submit" class="btn btn-block btn-primary">Update</button>
+         </form>
+      `
+   }
+
    static createLeagueOptions(){
       const sel = document.querySelector("#league_id")
       League.all.forEach(league => sel.innerHTML += `<option value="${league.id}">${league.name}</option>`)
@@ -202,6 +227,7 @@ class Team{
          switch (true) {
             case event.target.dataset.action === "edit":
                console.log("Its an edit")
+               event.target.parentElement.parentElement.parentElement.parentElement.parentElement.insertAdjacentHTML("beforeend",this.updateTeamForm())
                // let leagueId = event.target.nextElementSibling.firstElementChild.dataset.leagueId
                // let teamId = event.target.dataset.teamId
                // this.getTeam(leagueId, teamId)
@@ -234,14 +260,14 @@ class Team{
       <div class="col">
             <div class="card bg-light mb-3">
                <div class="card-header align-middle">
-               <a href="#" data-team-id="${this.id}">${this.name}</a>
+               <a href="#" data-team-id="${this.id}" id="team_name">${this.name}</a>
                   <span>
                      <a href="#" data-league-id="${this.league_id}" class=" badge badge-dark float-right">${this.league}</a>
                   </span>
                </div>
                   <div class="card-body">
-                  <div class="card-text"><i class="fas fa-envelope"></i> ${this.email}</div>
-                  <div class="card-text"><i class="fas fa-mobile"></i> ${this.phone}</div>
+                  <div class="card-text" id="team_email"><i class="fas fa-envelope"></i> ${this.email}</div>
+                  <div class="card-text" id="team_phone"><i class="fas fa-mobile"></i> ${this.phone}</div>
                   <br>
                   <div class="action-buttons">
                      <button class="btn btn-info" data-team-id="${this.id}" data-action="edit">Edit Team</button>
