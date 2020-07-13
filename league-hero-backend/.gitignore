@@ -13,10 +13,6 @@
 /db/*.sqlite3-*
 
 # Ignore all logfiles and tempfiles.
-/*/*/*.log
-/*/*.log
-/*.log
-league-hero-backend/log/*.log
 /log/*
 /tmp/*
 !/log/.keep
@@ -34,3 +30,4 @@ league-hero-backend/log/*.log
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+tmp
