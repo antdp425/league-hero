@@ -155,22 +155,57 @@ class Team{
          teamRow.innerHTML += t.renderTeam()
          
          this.addListeners()
+         this.addActionListeners()
+         
          
       })
+   }
+
+   static deleteTeam(teamId){
+      let configObj = {
+         method: "DELETE",
+         headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+          }
+      }
+
+      fetch(`${baseURL}/teams/${teamId}`, configObj)
+      .then(this.getTeams())
    }
 
    static addListeners(){
       let teams = document.querySelector("#team-rows")
       teams.addEventListener("click",()=>{
+         console.log(event.target)
          switch (true) {
-            case !!event.target.dataset.teamId:               
+            case !!(event.target.dataset.teamId) && (event.target.tagName == "A"):
                let leagueId = event.target.nextElementSibling.firstElementChild.dataset.leagueId
                let teamId = event.target.dataset.teamId
                this.getTeam(leagueId, teamId)
                break;
-            case !!event.target.dataset.leagueId:
+            case !!(event.target.dataset.leagueId) && (event.target.tagName == "A"):
                // Team.getTeams()
                console.log("Its a league")
+               break;
+         }
+      })
+   }
+
+   static addActionListeners(){
+      let actions = document.querySelector(".action-buttons")
+      actions.addEventListener("click",()=>{
+         let teamId = event.target.dataset.teamId
+         switch (true) {
+            case event.target.dataset.action === "edit":
+               console.log("Its an edit")
+               // let leagueId = event.target.nextElementSibling.firstElementChild.dataset.leagueId
+               // let teamId = event.target.dataset.teamId
+               // this.getTeam(leagueId, teamId)
+               break;
+            case event.target.dataset.action === "delete":
+               Team.deleteTeam(teamId)
+               console.log("Its a delete")
                break;
          }
       })
@@ -197,14 +232,18 @@ class Team{
             <div class="card bg-light mb-3">
                <div class="card-header align-middle">
                <a href="#" data-team-id="${this.id}">${this.name}</a>
+                  <span>
                      <a href="#" data-league-id="${this.league_id}" class=" badge badge-dark float-right">${this.league}</a>
+                  </span>
                </div>
                   <div class="card-body">
                   <div class="card-text"><i class="fas fa-envelope"></i> ${this.email}</div>
                   <div class="card-text"><i class="fas fa-mobile"></i> ${this.phone}</div>
                   <br>
-                  <button class="btn btn-info" data-league-id="${this.id}>Edit Team</button>
-                  <button class="btn btn-danger" data-league-id="${this.id}>Delete Team</button>
+                  <div class="action-buttons">
+                     <button class="btn btn-info" data-team-id="${this.id}" data-action="edit">Edit Team</button>
+                     <button class="btn btn-danger" data-team-id="${this.id}" data-action="delete">Delete Team</button>
+                  </div>
                </div>
             </div>
       </div>
