@@ -28,3 +28,20 @@ form button{
    text-decoration: none;
 }
 
+.date-month{
+   border-top-left-radius: 5px;
+   border-top-right-radius: 5px;
+   color: white;
+   height: fit-content;
+   padding: 5px;
+   margin-bottom: auto;
+}
+
+.date-number{
+   padding-top: 10px;
+   height: 75%;
+   color: white;
+   margin-bottom: inherit;
+   border-bottom-left-radius: 5px;
+   border-bottom-right-radius: 5px;
+}
