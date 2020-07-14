@@ -42,6 +42,34 @@ class Team{
       })
    }
 
+   static getTeam(leagueId, teamId){
+      fetch(`${baseURL}/leagues/${leagueId}/teams/${teamId}`)
+      .then (resp =>  resp.json())
+      .then (teams => {         
+         container.innerHTML = ""
+         let actionRow = document.createElement("div")
+         let teamRow = document.createElement("div")
+         
+         actionRow.id = "action-row"
+         actionRow.className = "row"
+         
+         teamRow.id = "team-rows"
+         teamRow.classList.add("row","justify-content-center")
+         teamRow.innerHTML = ""
+         
+         container.appendChild(actionRow)
+         container.appendChild(teamRow)
+         
+         let t = new Team(teams)
+         teamRow.innerHTML += t.renderTeam()
+         
+         this.addListeners()
+         this.addActionListeners()
+         
+      })
+
+   }
+
    static newTeamButton(){
       return `
       <button type="button" class="btn btn-block btn-outline-primary ml-auto" id="add-team">Add Team</button>
@@ -131,35 +159,6 @@ class Team{
          teamRow.innerHTML = ""
          teamRow.innerHTML += t.renderTeam()
       })
-   }
-   
-   
-   static getTeam(leagueId, teamId){
-      fetch(`${baseURL}/leagues/${leagueId}/teams/${teamId}`)
-      .then (resp =>  resp.json())
-      .then (teams => {         
-         container.innerHTML = ""
-         let actionRow = document.createElement("div")
-         let teamRow = document.createElement("div")
-         
-         actionRow.id = "action-row"
-         actionRow.className = "row"
-         
-         teamRow.id = "team-rows"
-         teamRow.classList.add("row","justify-content-center")
-         teamRow.innerHTML = ""
-         
-         container.appendChild(actionRow)
-         container.appendChild(teamRow)
-         
-         let t = new Team(teams)
-         teamRow.innerHTML += t.renderTeam()
-         
-         // this.addListeners()
-         this.addActionListeners()
-         
-      })
-
    }
 
    static addActionListeners(){
@@ -273,7 +272,7 @@ class Team{
                this.getTeam(leagueId, teamId)
                break;
             case !!(event.target.dataset.leagueId) && (event.target.tagName == "A"):
-               // Team.getTeams()
+               League.getLeague(event.target.dataset.leagueId)
                console.log("Its a league")
                break;
          }
