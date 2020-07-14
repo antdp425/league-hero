@@ -32,13 +32,12 @@ form button{
    border-top-left-radius: 5px;
    border-top-right-radius: 5px;
    color: white;
-   height: fit-content;
-   padding: 5px;
+   padding-top: 5px;
+   padding-bottom: 5px;
    margin-bottom: auto;
 }
 
 .date-number{
-   padding-top: 10px;
    height: 75%;
    color: white;
    margin-bottom: inherit;
