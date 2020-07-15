@@ -83,7 +83,6 @@ class League{
          let leagueId = event.target.dataset.leagueId
          switch (true) {
             case event.target.dataset.action === "edit":
-               console.log("Its an edit")
                if (document.querySelector("form")){                  
                } else {
                   event.target.parentElement.parentElement.parentElement.parentElement.parentElement.insertAdjacentHTML("afterend",this.editLeagueForm())
@@ -92,75 +91,97 @@ class League{
                break;
             case event.target.dataset.action === "delete":
                this.deleteLeague(leagueId)
-               console.log("Its a delete")
                break;
          }
       })
    }
 
    static editLeagueForm(){
-
-      // let leagueData = {
-      //    id: document.querySelector("[data-team-id]").dataset.teamId,
-      //    name: document.querySelector("#team_name").innerText ,
-      //    email: document.querySelector("#team_email").innerText ,
-      //    phone: document.querySelector("#team_phone").innerText
-      // }
-      // return `      
-      //    <form>
-      //       <div class="form-group">
-      //          <label for="team_name">Team Name:</label>
-      //          <input type="text" class="form-control" name="team_name" id="team_name" value="${teamData.name}">
-      //       </div>
-      //       <div class="form-group">
-      //          <label for="email">Email:</label>
-      //          <input type="email" class="form-control" name="email" id="team_email" value="${teamData.email}">
-      //       </div>
-      //       <div class="form-group">
-      //       <label for="phone">Phone:</label>
-      //       <input type="text" class="form-control" name="phone" id="team_phone" maxlength="10" value="${teamData.phone}">
-      //    </div>
-      //       <button type="submit" class="btn btn-block btn-primary" data-team-id="${teamData.id}" id="update">Update</button>
-      //    </form>
-      // `
+      const id = document.querySelector("[data-league-id]").dataset.leagueId
+      const league = League.all.findIndex(league => league.id == id)
+      let leagueData = {
+         id: id,
+         name: League.all[league].name,
+         format: League.all[league].league_format,
+         start_date: League.all[league].start_date,
+         end_date: League.all[league].end_date
+      }
+      return `      
+         <form>
+            <div class="form-group>
+               <label for="leage_name">League Name:</label>
+               <input type="text" class="form-control" name="league_name" id="league_name" value="${leagueData.name}">
+            </div>
+            <div class="form-group">
+               <label for="league_format">League Format:</label>
+               <select class="form-control" name="league_format" id="league_format">
+                  <option value="${leagueData.format}">${leagueData.format}</option>
+                  <option>3v3</option>
+                  <option>5v5</option>
+                  <option>7v7</option>
+                  <option>11v11</option>
+               </select>
+            </div>
+            <div class="form-group">
+            <label for="start_date">Start Date:</label>
+            <input type="date" class="form-control" name="start_date" id="start_date" value="${leagueData.start_date}" min="${today}">
+         </div>
+         <div class="form-group">
+            <label for="end_date">End Date:</label>
+            <input type="date" class="form-control" name="end_date" id="end_date" value="${leagueData.end_date}">
+         </div>
+            <button id="update" data-league-id="${leagueData.id}" type="submit" class="btn btn-primary btn-block">Update</button>
+         </form>
+      `
    }
 
    static updateLeagueListener(){
-   //    let button = document.querySelector("#update")
-   //    button.addEventListener("click", () => {
-   //       event.preventDefault()
-   //       this.updateTeam(event.target.dataset.teamId)
-   //       button.parentNode.removeChild(button)
-   // })
+      let button = document.querySelector("#update")
+      button.addEventListener("click", () => {
+         event.preventDefault()
+         this.updateLeague(event.target.dataset.leagueId)
+         button.parentNode.remove()
+   })
 }
 
    static updateLeague(leagueId){
-      // console.log(`You passed in ${teamId}`);
-      // let form = event.target.parentElement
-      // let formData = {
-      //    name: form[0].value,
-      //    email: form[1].value,
-      //    phone: form[2].value
-      // }
+      const allId = League.all.findIndex(league => league.id == leagueId)
+      let form = event.target.parentElement
+      let formData = {
+         name: form[0].value,
+         league_format: form[1].value,
+         start_date: form[2].value,
+         end_date: form[3].value 
+      }
 
-      // let configObj = {
-      //    method: "PATCH",
-      //    headers: {
-      //       "Content-Type": "application/json",
-      //       "Accept": "application/json"
-      //    },
-      //    body: JSON.stringify(formData)
-      // }
+      let configObj = {
+         method: "PATCH",
+         headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+         },
+         body: JSON.stringify(formData)
+      }
       
-      // fetch(`${baseURL}/teams/${teamId}`, configObj)
-      // .then(resp => resp.json())
-      // .then(created => {
-      //    let teamRow = document.querySelector("#team-rows")
+      fetch(`${baseURL}/leagues/${leagueId}`, configObj)
+      .then(resp => resp.json())
+      .then(created => {
+         let leagueRow = document.querySelector("#league-rows")
          
-      //    let t = new Team(created)
-      //    teamRow.innerHTML = ""
-      //    teamRow.innerHTML += t.renderTeam()
-      // })
+         let l = new League(created)
+         leagueRow.innerHTML = ""
+         leagueRow.innerHTML += l.renderLeague()
+
+         this.addActionListeners()
+
+         League.all[allId] = {
+            id: leagueId,
+            name: form[0].value,
+            league_format: form[1].value,
+            start_date: form[2].value,
+            end_date: form[3].value 
+         }
+      })
    }
 
    static deleteLeague(leagueId){
@@ -215,12 +236,11 @@ class League{
 
    renderLeague(){
       League.store.call(this)
-      
       return `
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
 
          <div class="card bg-light mb-3">
-            <h2 class="card-header text-center">${this.name}</h2>
+            <h2 class="card-header text-center league-name">${this.name}</h2>
                <div class="card-body bg-white border-dark">
                   <div class="row">
 
@@ -362,8 +382,10 @@ class League{
          return "Upcoming"
       } else if ((currentDay === start) || ((currentDay > start) && (currentDay < end))) {
          return "In Progress"
-      } else {
+      } else if ((end < currentDay)){
          return "Finished"
+      } else {
+         return "Unkown"
       }
    }
 

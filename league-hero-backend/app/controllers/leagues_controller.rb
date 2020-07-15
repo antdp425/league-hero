@@ -32,8 +32,12 @@ class LeaguesController < ApplicationController
 
   # PATCH/PUT /leagues/1
   def update
+    binding.pry
     if @league.update(league_params)
-      render json: @league
+      render json: @league,
+      include: [:teams], 
+      except: [:created_at, :updated_at],
+      status: :created, location: @league
     else
       render json: @league.errors, status: :unprocessable_entity
     end
