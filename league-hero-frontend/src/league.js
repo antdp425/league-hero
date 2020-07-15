@@ -1,12 +1,13 @@
 class League{
    static all = []
    static months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"]
+   
    constructor(leagueInfo){
       this.id = leagueInfo.id
       this.name = leagueInfo.name
       this.league_format = leagueInfo.league_format
-      this.start_date = new Date(leagueInfo.start_date)
-      this.end_date = new Date(leagueInfo.end_date)
+      this.start_date = leagueInfo.start_date
+      this.end_date = leagueInfo.end_date
       this.teams = leagueInfo.teams
    }
 
@@ -85,7 +86,7 @@ class League{
                console.log("Its an edit")
                if (document.querySelector("form")){                  
                } else {
-                  event.target.parentElement.parentElement.parentElement.parentElement.parentElement.insertAdjacentHTML("beforeend",this.editLegueForm())
+                  event.target.parentElement.parentElement.parentElement.parentElement.parentElement.insertAdjacentHTML("beforeend",this.editLeagueForm())
                   this.updateLeagueListener()
                }
                break;
@@ -98,7 +99,8 @@ class League{
    }
 
    static editLeagueForm(){
-      // let teamData = {
+
+      // let leagueData = {
       //    id: document.querySelector("[data-team-id]").dataset.teamId,
       //    name: document.querySelector("#team_name").innerText ,
       //    email: document.querySelector("#team_email").innerText ,
@@ -183,22 +185,28 @@ class League{
       League.store.call(this)
 
       return `
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-4">
+      <div class="col-xs-12 col-sm-12 col-md-10 col-lg-6 col-xl-4">
+
          <div class="card bg-light mb-3">
             <div class="card-header bg-border-dark text-center">
                <a href="#" data-league-id="${this.id}">${this.name}</a>
             </div>
             <div class="card-body bg-white border-dark">
               <div class="row">
-                <div class="col-4">
-                  <h5 class="card-title bg-secondary text-center date-month">${League.months[this.start_date.getMonth()]}</h5>
-                <h1 class="card-text bg-dark text-center date-number">${this.start_date.getUTCDate()}</h1>
+                <div class="col-sm-4 league-start-date">
+                     <h5 class="card-title bg-secondary text-center date-month">${this.getMonth(this.start_date)}</h5>
+                     <h1 class="card-text bg-dark text-center date-number">${this.getDay(this.start_date)}</h1>
                </div>
-                <div class="col-8">
-                  <h3 class="card-title text-center">Light card title</h3>
-               <p class="card-text text-center">Some quick example text.</p>
+
+                <div class="col-sm-4 league-status">
+                     <h5 class="card-title bg-secondary text-center">${this.start_date}</h5>
+                     <h3 class="card-text bg-light text-center">Status here</h3>
                 </div>
-              </div>
+                <div class="col-sm-4 league-teams-count">
+                     <h5 class="card-title bg-secondary text-center">Total Teams</h5>
+                     <h3 class="card-text bg-light text-center">${this.teams.length}</h3>
+                </div>
+               </div>
             </div>
          </div>
       </div>
@@ -324,5 +332,15 @@ class League{
       League.all.findIndex(league => league.id === this.id) === -1 ?
          League.all.push(this) : 
             false
+   }
+
+   getMonth(league_date){
+      const date = new Date(league_date).getUTCMonth()
+      return League.months[date]
+   }
+
+   getDay(league_date){
+      const date = new Date(league_date).getUTCDate()
+      return date
    }
 }
