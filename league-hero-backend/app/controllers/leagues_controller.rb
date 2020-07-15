@@ -17,8 +17,7 @@ class LeaguesController < ApplicationController
   def create
     @league = League.new(league_params)
     if @league.save
-      render json: @league,
-      status: :created, location: @league
+      render json: @league
     else
       render json: @league.errors, status: :unprocessable_entity
     end
@@ -28,8 +27,7 @@ class LeaguesController < ApplicationController
   def update
     binding.pry
     if @league.update(league_params)
-      render json: @league,
-      status: :created, location: @league
+      render json: @league
     else
       render json: @league.errors, status: :unprocessable_entity
     end

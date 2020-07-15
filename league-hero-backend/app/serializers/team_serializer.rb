@@ -1,4 +1,4 @@
 class TeamSerializer < ActiveModel::Serializer
-  attributes (Team.attribute_names.map(&:to_sym))
+  attributes :id, :name, :email, :phone, :league_id
   belongs_to :league
 end
