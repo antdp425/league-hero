@@ -199,8 +199,8 @@ class League{
                </div>
 
                 <div class="col-sm-4 league-status">
-                     <h5 class="card-title bg-secondary text-center">${this.start_date}</h5>
-                     <h3 class="card-text bg-light text-center">Status here</h3>
+                     <h5 class="card-title bg-secondary text-center">Status</h5>
+                     <h3 class="card-text bg-light text-center">${this.getStatus()}</h3>
                 </div>
                 <div class="col-sm-4 league-teams-count">
                      <h5 class="card-title bg-secondary text-center">Total Teams</h5>
@@ -223,8 +223,8 @@ class League{
                <div class="card-body">
                   <div class="row">
                      <div class="col-3">
-                        <h5 class="card-title bg-secondary text-center date-month">${League.months[this.start_date.getMonth()]}</h5>
-                        <h1 class="card-text bg-dark text-center date-number">${this.start_date.getUTCDate()}</h1>
+                        <h5 class="card-title bg-secondary text-center date-month">${this.getMonth(this.start_date)}</h5>
+                        <h1 class="card-text bg-dark text-center date-number">${this.getDay(this.start_date)}</h1>
                      </div>
                      <div class="col-9">
                            <h5 class="card-title text-center">Light card title</h5>
@@ -342,5 +342,19 @@ class League{
    getDay(league_date){
       const date = new Date(league_date).getUTCDate()
       return date
+   }
+
+   getStatus(){
+      const start = new Date(this.start_date)
+      const end = new Date(this.end_date)
+      const currentDay = new Date(today)
+      if (currentDay < (start && end)){
+         return "Upcoming"
+      } else if ((currentDay === start) || 
+                  ((currentDay > start) && (currentDay < end))) {
+         return "In Progress"
+      } else {
+         return "Finished"
+      }
    }
 }
