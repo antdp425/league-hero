@@ -86,7 +86,7 @@ class League{
                console.log("Its an edit")
                if (document.querySelector("form")){                  
                } else {
-                  event.target.parentElement.parentElement.parentElement.parentElement.parentElement.insertAdjacentHTML("beforeend",this.editLeagueForm())
+                  event.target.parentElement.parentElement.parentElement.parentElement.parentElement.insertAdjacentHTML("afterend",this.editLeagueForm())
                   this.updateLeagueListener()
                }
                break;
@@ -185,7 +185,7 @@ class League{
       League.store.call(this)
 
       return `
-      <div class="col-xs-12 col-sm-12 col-md-10 col-lg-6 col-xl-4">
+      <div class="col-xs-12 col-sm-12 col-md-10 col-lg-6 col-xl-6">
 
          <div class="card bg-light mb-3">
             <div class="card-header bg-border-dark text-center">
@@ -218,26 +218,36 @@ class League{
       
       return `
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
+
          <div class="card bg-light mb-3">
             <h2 class="card-header text-center">${this.name}</h2>
-               <div class="card-body">
+               <div class="card-body bg-white border-dark">
                   <div class="row">
-                     <div class="col-3">
+
+                     <div class="col-sm-4 league-start-date">
                         <h5 class="card-title bg-secondary text-center date-month">${this.getMonth(this.start_date)}</h5>
                         <h1 class="card-text bg-dark text-center date-number">${this.getDay(this.start_date)}</h1>
                      </div>
-                     <div class="col-9">
-                           <h5 class="card-title text-center">Light card title</h5>
-                           <p class="card-text text-center">Some quick example text.</p>
+
+                     <div class="col-sm-4 league-status">
+                        <h5 class="card-title bg-secondary text-center">Status</h5>
+                        <h3 class="card-text bg-light text-center">${this.getStatus()}</h3>
                      </div>
-                  </div>
+
+                     <div class="col-sm-4 league-teams-count">
+                           <h5 class="card-title bg-secondary text-center">Total Teams</h5>
+                           <h3 class="card-text bg-light text-center">${this.teams.length}</h3>
+                     </div>
+                </div>
+                  
                   <br>
-                  <div class="action-buttons">
-                     <button class="btn btn-info" data-league-id="${this.id}" data-action="edit">Edit League</button>
-                     <button class="btn btn-danger" data-league-id="${this.id}" data-action="delete">Delete League</button>
+                     <div class="action-buttons text-center">
+                        <button class="btn btn-info" data-league-id="${this.id}" data-action="edit">Edit League</button>
+                        <button class="btn btn-danger" data-league-id="${this.id}" data-action="delete">Delete League</button>
+                     </div>
                </div>
-            </div>
          </div>
+      </div>
       `
    }
 
@@ -270,7 +280,7 @@ class League{
          </div>
          <div class="form-group">
             <label for="end_date">End Date:</label>
-            <input type="date" class="form-control" name="end_date" id="end_date" min="${tomorrow}">
+            <input type="date" class="form-control" name="end_date" id="end_date">
          </div>
             <button type="submit" class="btn btn-primary btn-block">Submit</button>
          </form>
@@ -350,11 +360,11 @@ class League{
       const currentDay = new Date(today)
       if (currentDay < (start && end)){
          return "Upcoming"
-      } else if ((currentDay === start) || 
-                  ((currentDay > start) && (currentDay < end))) {
+      } else if ((currentDay === start) || ((currentDay > start) && (currentDay < end))) {
          return "In Progress"
       } else {
          return "Finished"
       }
    }
+
 }
