@@ -5,10 +5,11 @@ class TeamsController < ApplicationController
   def index
     teams = Team.all.order(name: :asc)
 
-    render json: teams.to_json(:include => {
-      :league => {:only => [:name, :league_format]}},
-      except: [:created_at, :updated_at]
-    )
+    render json: teams
+    # .to_json(:include => {
+    #   :league => {:only => [:name, :league_format]}},
+    #   except: [:created_at, :updated_at]
+    # )
   end
 
   # GET /teams/1

@@ -5,16 +5,12 @@ class LeaguesController < ApplicationController
   def index
     leagues = League.all.order(start_date: :asc)
 
-    render json: leagues,
-      include: [:teams], 
-      except: [:created_at, :updated_at]
+    render json: leagues
   end
 
   # GET /leagues/1
   def show
-    render json: @league,
-      include: [:teams], 
-      except: [:created_at, :updated_at]
+    render json: @league
   end
 
   # POST /leagues
@@ -22,8 +18,6 @@ class LeaguesController < ApplicationController
     @league = League.new(league_params)
     if @league.save
       render json: @league,
-      include: [:teams], 
-      except: [:created_at, :updated_at],
       status: :created, location: @league
     else
       render json: @league.errors, status: :unprocessable_entity
@@ -35,8 +29,6 @@ class LeaguesController < ApplicationController
     binding.pry
     if @league.update(league_params)
       render json: @league,
-      include: [:teams], 
-      except: [:created_at, :updated_at],
       status: :created, location: @league
     else
       render json: @league.errors, status: :unprocessable_entity
