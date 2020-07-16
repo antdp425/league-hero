@@ -18,7 +18,7 @@ class League{
          container.innerHTML = ""
          let actionRow = document.createElement("div")
          let leagueRow = document.createElement("div")
-
+         
          actionRow.id = "action-row"
          actionRow.className = "row"
          
@@ -28,17 +28,17 @@ class League{
          
          container.appendChild(actionRow)
          container.appendChild(leagueRow)
-
+         
          actionRow.innerHTML += this.newLeagueButton()
          this.newLeagueListener()
-
+         
          leagues.forEach(league => {
             let l = new League(league)
             leagueRow.innerHTML += l.renderLeagueShort()
          })
-
+         
          this.addListeners()
-
+         
       })
    }
    
@@ -62,27 +62,28 @@ class League{
          
          let l = new League(leagues)
          leagueRow.innerHTML += l.renderLeague()
-
-         this.addActionListeners()
-
-         // l.teams.forEach(team => {
-         //    let t = new Team(team)
-         //    leagueRow.insertAdjacentHTML("afterend", t.renderTeamShort())
-         // }) 
          
+         this.addActionListeners()
+         
+         // l.teams.forEach(team => {
+            //    let t = new Team(team)
+            //    leagueRow.insertAdjacentHTML("afterend", t.renderTeamShort())
+            // }) 
+            
+            
+         })
+      }
 
-      })
-   }
    static addListeners(){
       let leagues = document.querySelector("#league-rows")
       leagues.addEventListener("click",()=>{      
          if (!!(event.target.dataset.leagueId)){   
-         let leagueId = event.target.dataset.leagueId
-         this.getLeague(leagueId)
+            let leagueId = event.target.dataset.leagueId
+            this.getLeague(leagueId)
          }
       })
    }
-
+   
    static addActionListeners(){
       let actions = document.querySelector(".action-buttons")
       actions.addEventListener("click",()=>{
@@ -91,15 +92,92 @@ class League{
             case event.target.dataset.action === "edit":
                if (document.querySelector("form")){
                } else {
+                  event.stopPropagation()
                   event.target.parentElement.parentElement.parentElement.parentElement.parentElement.insertAdjacentHTML("afterend",this.editLeagueForm())
                   this.updateLeagueListener()
                }
                break;
-            case event.target.dataset.action === "delete":
-               this.deleteLeague(leagueId)
-               break;
+               case event.target.dataset.action === "delete":
+                  this.deleteLeague(leagueId)
+                  break;
+               }
+            })
+         }
+            
+   static newLeagueListener(){
+      let button = document.querySelector("#add-league")
+      button.addEventListener("click", () => {
+         event.preventDefault()
+         if (document.querySelector("form")){
+         } else {
+            event.target.parentElement.insertAdjacentHTML("beforeend",(this.newLeagueForm()))
+            this.createLeagueListener()
          }
       })
+   }
+
+   static createLeagueListener(){
+      let form = document.querySelector("form")
+      form.addEventListener("submit", () => {
+         event.preventDefault()
+         this.createLeague()
+         document.documentElement.scrollTop = 0;
+      })
+   }
+
+   static createLeague(){
+      let form = event.target
+      let alertElement = document.querySelector(".alert-danger")
+      let successElement = document.querySelector(".alert-success")
+      let actionRow = document.querySelector("#action-row")
+      
+      let formData = {
+         name: form[0].value,
+         league_format: form[1].value,
+         start_date: form[2].value,
+         end_date: form[3].value
+      }
+
+      let configObj = {
+         method: "POST",
+         headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+            },
+            body: JSON.stringify(formData)
+      }
+
+      fetch(`${baseURL}/leagues`, configObj)
+      .then(resp => resp.json())
+      .then(created => {
+
+         if (created.errors) {
+            if (alertElement) alertElement.remove()
+            if (successElement) successElement.remove()
+
+            this.renderLeagueErrors(created.errors)
+
+         } else {
+            if (alertElement) alertElement.remove()
+            if (successElement) successElement.remove()
+            form.parentNode.removeChild(form)
+
+            let successAlert = `
+               <div class="alert alert-success" role="alert">
+                  League created
+               </div>
+            `
+            
+            container.insertAdjacentHTML("afterbegin", successAlert)
+            
+            let leagueRow = document.querySelector("#league-rows")
+            
+            let l = new League(created)
+            actionRow.innerHTML = ""
+            leagueRow.innerHTML = ""
+            leagueRow.innerHTML += l.renderLeague()
+            this.addActionListeners()
+      }})
    }
 
    static editLeagueForm(){
@@ -112,6 +190,7 @@ class League{
          start_date: League.all[league].start_date,
          end_date: League.all[league].end_date
       }
+
       return `      
          <form>
             <div class="form-group>
@@ -338,81 +417,6 @@ class League{
       `
    }
 
-   static newLeagueListener(){
-      let button = document.querySelector("#add-league")
-      button.addEventListener("click", () => {
-         event.preventDefault()
-         if (document.querySelector("form")){
-         } else {
-            event.target.parentElement.insertAdjacentHTML("beforeend",(this.newLeagueForm()))
-            this.createLeagueListener()
-         }
-      })
-   }
-
-   static createLeagueListener(){
-      let form = document.querySelector("form")
-      form.addEventListener("submit", () => {
-         event.preventDefault()
-         this.createLeague()
-         document.documentElement.scrollTop = 0;
-      })
-   }
-
-   static createLeague(){
-      let form = event.target
-      let alertElement = document.querySelector(".alert-danger")
-      let successElement = document.querySelector(".alert-success")
-      let actionRow = document.querySelector("#action-row")
-      
-      let formData = {
-         name: form[0].value,
-         league_format: form[1].value,
-         start_date: form[2].value,
-         end_date: form[3].value
-      }
-
-      let configObj = {
-         method: "POST",
-         headers: {
-            "Content-Type": "application/json",
-            "Accept": "application/json"
-          },
-          body: JSON.stringify(formData)
-      }
-
-      fetch(`${baseURL}/leagues`, configObj)
-      .then(resp => resp.json())
-      .then(created => {
-
-         if (created.errors) {
-            if (alertElement) alertElement.remove()
-            if (successElement) successElement.remove()
-
-            this.renderLeagueErrors(created.errors)
-
-         } else {
-            if (alertElement) alertElement.remove()
-            if (successElement) successElement.remove()
-            form.parentNode.removeChild(form)
-
-            let successAlert = `
-               <div class="alert alert-success" role="alert">
-                  League created
-               </div>
-            `
-            
-            container.insertAdjacentHTML("afterbegin", successAlert)
-            
-            let leagueRow = document.querySelector("#league-rows")
-            
-            let l = new League(created)
-            actionRow.innerHTML = ""
-            leagueRow.innerHTML = ""
-            leagueRow.innerHTML += l.renderLeague()
-            this.addActionListeners()
-      }})
-   }
 
    static renderLeagueErrors(errors){
       let errorAlert = `
