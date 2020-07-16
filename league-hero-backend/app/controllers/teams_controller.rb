@@ -6,18 +6,11 @@ class TeamsController < ApplicationController
     teams = Team.all.order(name: :asc)
 
     render json: teams
-    # .to_json(:include => {
-    #   :league => {:only => [:name, :league_format]}},
-    #   except: [:created_at, :updated_at]
-    # )
   end
 
   # GET /teams/1
   def show
-    render json: @team.to_json(:include => {
-      :league => {:only => [:name, :league_format]}},
-      except: [:created_at, :updated_at]
-    )
+    render json: @team
     end
 
   # POST /teams
@@ -25,22 +18,18 @@ class TeamsController < ApplicationController
     team = Team.new(team_params)
 
     if team.save
-      render json: team.to_json(:include => {
-        :league => {:only => [:name, :league_format]}}), 
-        status: :created, location: team
+      render json: team
     else
-      render json: team.errors, status: :unprocessable_entity
+      render json: {errors: team.errors.full_messages}, status: :unprocessable_entity
     end
   end
 
   # PATCH/PUT /teams/1
   def update
     if @team.update(team_params)
-      render json: @team.to_json(:include => {
-        :league => {:only => [:name, :league_format]}}), 
-        status: :created, location: @team
+      render json: @team
     else
-      render json: @team.errors, status: :unprocessable_entity
+      render json: {errors: @team.errors.full_messages}, status: :unprocessable_entity
     end
   end
 

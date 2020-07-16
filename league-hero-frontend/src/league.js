@@ -155,6 +155,7 @@ class League{
       let successElement = document.querySelector(".alert-success")
 
       const allId = League.all.findIndex(league => league.id == leagueId)
+
       let form = event.target.parentElement
       let formData = {
          name: form[0].value,
@@ -189,26 +190,26 @@ class League{
 
             let successAlert = `
                <div class="alert alert-success" role="alert">
-                  League successfully created
+                  Success
                </div>
             `
 
             container.insertAdjacentHTML("afterbegin", successAlert)
-         let leagueRow = document.querySelector("#league-rows")
-         
-         let l = new League(created)
-         leagueRow.innerHTML = ""
-         leagueRow.innerHTML += l.renderLeague()
+            let leagueRow = document.querySelector("#league-rows")
+            
+            let l = new League(created)
+            leagueRow.innerHTML = ""
+            leagueRow.innerHTML += l.renderLeague()
 
-         this.addActionListeners()
+            this.addActionListeners()
 
-         League.all[allId] = {
-            id: leagueId,
-            name: form[0].value,
-            league_format: form[1].value,
-            start_date: form[2].value,
-            end_date: form[3].value 
-         }
+            League.all[allId] = {
+               id: leagueId,
+               name: form[0].value,
+               league_format: form[1].value,
+               start_date: form[2].value,
+               end_date: form[3].value 
+            }
       }})
    }
 
@@ -360,6 +361,7 @@ class League{
       let form = event.target
       let alertElement = document.querySelector(".alert-danger")
       let successElement = document.querySelector(".alert-success")
+      let actionRow = document.querySelector("#action-row")
       
       let formData = {
          name: form[0].value,
@@ -403,6 +405,7 @@ class League{
             let leagueRow = document.querySelector("#league-rows")
 
             let l = new League(created)
+            actionRow.innerHTML = ""
             leagueRow.innerHTML = ""
             leagueRow.innerHTML += l.renderLeague()
 
@@ -415,6 +418,7 @@ class League{
             <h5 class="alert-heading">Errors occured:</h5>
          </div>
       `
+      
       container.insertAdjacentHTML("afterbegin", errorAlert)
 
       errors.forEach(error => {

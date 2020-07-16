@@ -4,7 +4,6 @@ class LeaguesController < ApplicationController
   # GET /leagues
   def index
     leagues = League.all.order(start_date: :asc)
-
     render json: leagues
   end
 

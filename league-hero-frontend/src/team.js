@@ -126,13 +126,16 @@ class Team{
       form.addEventListener("submit", () => {
          event.preventDefault()
          this.createTeam()
-         form.parentNode.removeChild(form)
+         document.documentElement.scrollTop = 0;
+         // form.parentNode.removeChild(form)
       })
    }
    
    static createTeam(){
-      console.log("You're about to create a team")
       let form = event.target
+      let alertElement = document.querySelector(".alert-danger")
+      let successElement = document.querySelector(".alert-success")
+      let actionRow = document.querySelector("#action-row")
       
       let formData = {
          name: form[0].value,
@@ -153,12 +156,31 @@ class Team{
       fetch(`${baseURL}/teams`, configObj)
       .then(resp => resp.json())
       .then(created => {
-         let teamRow = document.querySelector("#team-rows")
-         
-         let t = new Team(created)
-         teamRow.innerHTML = ""
-         teamRow.innerHTML += t.renderTeam()
-      })
+         if (created.errors){
+            if (alertElement) alertElement.remove()
+            if (successElement) successElement.remove()
+
+            this.renderTeamErrors(created.errors)
+
+         } else {
+            if (alertElement) alertElement.remove()
+            if (successElement) successElement.remove()
+            form.parentNode.removeChild(form)
+
+            let successAlert = `
+            <div class="alert alert-success" role="alert">
+               League successfully created
+            </div>
+            `
+
+            container.insertAdjacentHTML("afterbegin", successAlert)
+
+            let teamRow = document.querySelector("#team-rows")
+            
+            let t = new Team(created)
+            teamRow.innerHTML = ""
+            teamRow.innerHTML += t.renderTeam()
+      }})
    }
 
    static addActionListeners(){
@@ -211,6 +233,7 @@ class Team{
       button.addEventListener("click", () => {
          event.preventDefault()
          this.updateTeam(event.target.dataset.teamId)
+         document.documentElement.scrollTop = 0;
          button.parentNode.removeChild(button)
    })
 }
@@ -317,6 +340,23 @@ class Team{
             </div>
       </div>
       `
+   }
+
+   static renderTeamErrors(errors){
+      let errorAlert = `
+         <div class="alert alert-danger" role="alert">
+            <h5 class="alert-heading">Errors occured:</h5>
+         </div>
+      `
+      
+      container.insertAdjacentHTML("afterbegin", errorAlert)
+
+      errors.forEach(error => {
+         document.querySelector(".alert").innerHTML += `
+            <p class="mb-0"> - ${error}</p>
+         `
+      })
+
    }
 
    // static store(){
