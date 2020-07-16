@@ -45,7 +45,7 @@ class League{
    static getLeague(leagueId){
       fetch(`${baseURL}/leagues/${leagueId}`)
       .then (resp =>  resp.json())
-      .then (leagues => {         
+      .then (leagues => {   
          container.innerHTML = ""
          let actionRow = document.createElement("div")
          let leagueRow = document.createElement("div")
@@ -61,7 +61,12 @@ class League{
          container.appendChild(leagueRow)
          
          let l = new League(leagues)
-         leagueRow.innerHTML += l.renderLeague() 
+         leagueRow.innerHTML += l.renderLeague()
+
+         // l.teams.forEach(team => {
+         //    let t = new Team(team)
+         //    leagueRow.insertAdjacentHTML("afterend", t.renderTeamShort())
+         // }) 
          
          this.addActionListeners()
 
@@ -240,7 +245,7 @@ class League{
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
 
          <div class="card bg-light mb-3">
-            <h2 class="card-header text-center league-name">${this.name}</h2>
+            <h2 class="card-header text-center league-name">${"" || this.name}</h2>
                <div class="card-body bg-white border-dark">
                   <div class="row">
 
@@ -324,7 +329,6 @@ class League{
       form.addEventListener("submit", () => {
          event.preventDefault()
          this.createLeague()
-         form.parentNode.removeChild(form)
       })
    }
 
@@ -350,12 +354,47 @@ class League{
       fetch(`${baseURL}/leagues`, configObj)
       .then(resp => resp.json())
       .then(created => {
+         if (created.errors) {
+            const alertElement = document.querySelector(".alert")
+            if (alertElement) alertElement.remove()
+            this.renderLeagueErrors(created.errors)
+            // this.renderLeagueErrors(created.errors)
+            // let nameInput = document.querySelector("#league_name").parentElement
+            // let formatInput = document.querySelector("#league_format").parentElement
+            // let startInput = document.querySelector("#start_date").parentElement
+            // let endInput = document.querySelector("#end_date").parentElement
+
+            // nameInput.insertAdjacentHTML("beforeend",`<small>${created.errors.league_name || ""}</small>`)
+            // formatInput.insertAdjacentHTML("beforeend",`<small>${created.errors.league_format || ""}</small>`)
+            // startInput.insertAdjacentHTML("beforeend",`<small>${created.errors.start_date || ""}</small>`)
+            // endInput.insertAdjacentHTML("beforeend",`<small>${created.errors.end_date || ""}</small>`)
+         } else {
+         const alertElement = document.querySelector(".alert")
+         if (alertElement) alertElement.remove()
+         form.parentNode.removeChild(form)
+
          let leagueRow = document.querySelector("#league-rows")
 
          let l = new League(created)
          leagueRow.innerHTML = ""
          leagueRow.innerHTML += l.renderLeague()
+      }})
+   }
+
+   static renderLeagueErrors(errors){
+      let errorAlert = `
+         <div class="alert alert-danger" role="alert">
+            <h5 class="alert-heading">Errors occured while creating your league:</h5>
+         </div>
+      `
+      container.insertAdjacentHTML("afterbegin", errorAlert)
+
+      errors.forEach(error => {
+         document.querySelector(".alert").innerHTML += `
+            <p class="mb-0"> - ${error}</p>
+         `
       })
+
    }
 
    static store(){

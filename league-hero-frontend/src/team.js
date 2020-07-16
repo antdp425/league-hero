@@ -99,7 +99,7 @@ class Team{
             <div class="form-group">
                <label for="league_id">League:</label>
                <select class="form-control" name="league_format" id="league_id" required>
-                  <option value="">--Select a League Format --</option>
+                  <option value="">--Select a League--</option>
                </select>
             </div>
             <div class="form-group">

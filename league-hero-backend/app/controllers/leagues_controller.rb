@@ -19,7 +19,7 @@ class LeaguesController < ApplicationController
     if @league.save
       render json: @league
     else
-      render json: @league.errors, status: :unprocessable_entity
+      render json: {errors: @league.errors.full_messages}, status: :unprocessable_entity
     end
   end
 
