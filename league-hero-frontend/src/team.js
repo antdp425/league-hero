@@ -1,5 +1,4 @@
 class Team{
-   // static leagues = []
    constructor(teamInfo){
       this.id = teamInfo.id
       this.name = teamInfo.name
@@ -127,7 +126,6 @@ class Team{
          event.preventDefault()
          this.createTeam()
          document.documentElement.scrollTop = 0;
-         // form.parentNode.removeChild(form)
       })
    }
    
@@ -169,7 +167,7 @@ class Team{
 
             let successAlert = `
             <div class="alert alert-success" role="alert">
-               League successfully created
+               Team successfully created
             </div>
             `
 
@@ -178,8 +176,11 @@ class Team{
             let teamRow = document.querySelector("#team-rows")
             
             let t = new Team(created)
+            actionRow.innerHTML = ""
             teamRow.innerHTML = ""
             teamRow.innerHTML += t.renderTeam()
+
+            this.addActionListeners()
       }})
    }
 
@@ -234,12 +235,13 @@ class Team{
          event.preventDefault()
          this.updateTeam(event.target.dataset.teamId)
          document.documentElement.scrollTop = 0;
-         button.parentNode.removeChild(button)
    })
 }
 
    static updateTeam(teamId){
-      console.log(`You passed in ${teamId}`);
+      let alertElement = document.querySelector(".alert-danger")
+      let successElement = document.querySelector(".alert-success")
+      
       let form = event.target.parentElement
       let formData = {
          name: form[0].value,
@@ -259,12 +261,32 @@ class Team{
       fetch(`${baseURL}/teams/${teamId}`, configObj)
       .then(resp => resp.json())
       .then(created => {
-         let teamRow = document.querySelector("#team-rows")
-         
-         let t = new Team(created)
-         teamRow.innerHTML = ""
-         teamRow.innerHTML += t.renderTeam()
-      })
+         if (created.errors) {
+            if (alertElement) alertElement.remove()
+            if (successElement) successElement.remove()
+
+            this.renderTeamErrors(created.errors)
+         } else {
+            if (alertElement) alertElement.remove()
+            if (successElement) successElement.remove()
+            form.parentNode.removeChild(form)
+
+
+            let successAlert = `
+               <div class="alert alert-success" role="alert">
+                  Team Updated
+               </div>
+            `
+
+            container.insertAdjacentHTML("afterbegin", successAlert)
+
+            let teamRow = document.querySelector("#team-rows")
+            
+            let t = new Team(created)
+            teamRow.innerHTML = ""
+            teamRow.innerHTML += t.renderTeam()
+            this.addActionListeners()
+      }})
    }
    
    static deleteTeam(teamId){
@@ -287,7 +309,6 @@ class Team{
    static addListeners(){
       let teams = document.querySelector("#team-rows")
       teams.addEventListener("click",()=>{
-         console.log(event.target)
          switch (true) {
             case !!(event.target.dataset.teamId) && (event.target.tagName == "A"):
                let leagueId = event.target.nextElementSibling.firstElementChild.dataset.leagueId
@@ -329,8 +350,8 @@ class Team{
                   </span>
                </div>
                   <div class="card-body">
-                  <div class="card-text" id="team_email"><i class="fas fa-envelope"></i> ${this.email}</div>
-                  <div class="card-text" id="team_phone"><i class="fas fa-mobile"></i> ${this.phone}</div>
+                  <div class="card-text" id="team_email"><i class="fas fa-envelope"></i>${this.email}</div>
+                  <div class="card-text" id="team_phone"><i class="fas fa-mobile"></i>${this.phone}</div>
                   <br>
                   <div class="action-buttons">
                      <button class="btn btn-info" data-team-id="${this.id}" data-action="edit">Edit Team</button>

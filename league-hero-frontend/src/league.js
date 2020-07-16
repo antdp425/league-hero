@@ -63,12 +63,13 @@ class League{
          let l = new League(leagues)
          leagueRow.innerHTML += l.renderLeague()
 
+         this.addActionListeners()
+
          // l.teams.forEach(team => {
          //    let t = new Team(team)
          //    leagueRow.insertAdjacentHTML("afterend", t.renderTeamShort())
          // }) 
          
-         this.addActionListeners()
 
       })
    }
@@ -88,7 +89,7 @@ class League{
          let leagueId = event.target.dataset.leagueId
          switch (true) {
             case event.target.dataset.action === "edit":
-               if (document.querySelector("form")){                  
+               if (document.querySelector("form")){
                } else {
                   event.target.parentElement.parentElement.parentElement.parentElement.parentElement.insertAdjacentHTML("afterend",this.editLeagueForm())
                   this.updateLeagueListener()
@@ -146,7 +147,6 @@ class League{
          event.preventDefault()
          this.updateLeague(event.target.dataset.leagueId)
          document.documentElement.scrollTop = 0;
-
    })
 }
 
@@ -190,7 +190,7 @@ class League{
 
             let successAlert = `
                <div class="alert alert-success" role="alert">
-                  Success
+                  League Updated
                </div>
             `
 
@@ -228,6 +228,7 @@ class League{
       .then(()=>{
          this.getLeagues()
          el.remove()
+         League.all.splice((League.all.findIndex(league => league.id == leagueId)),1)
       })
    }
 
@@ -265,6 +266,7 @@ class League{
 
    renderLeague(){
       League.store.call(this)
+
       return `
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
 
@@ -396,19 +398,19 @@ class League{
 
             let successAlert = `
                <div class="alert alert-success" role="alert">
-                  League successfully created
+                  League created
                </div>
             `
-
+            
             container.insertAdjacentHTML("afterbegin", successAlert)
-
+            
             let leagueRow = document.querySelector("#league-rows")
-
+            
             let l = new League(created)
             actionRow.innerHTML = ""
             leagueRow.innerHTML = ""
             leagueRow.innerHTML += l.renderLeague()
-
+            this.addActionListeners()
       }})
    }
 
