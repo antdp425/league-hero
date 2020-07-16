@@ -334,7 +334,9 @@ class League{
 
    static createLeague(){
       let form = event.target
-
+      let alertElement = document.querySelector(".alert-danger")
+      let successElement = document.querySelector(".alert-success")
+      
       let formData = {
          name: form[0].value,
          league_format: form[1].value,
@@ -354,30 +356,32 @@ class League{
       fetch(`${baseURL}/leagues`, configObj)
       .then(resp => resp.json())
       .then(created => {
+
          if (created.errors) {
-            const alertElement = document.querySelector(".alert")
             if (alertElement) alertElement.remove()
+            if (successElement) successElement.remove()
+
             this.renderLeagueErrors(created.errors)
-            // this.renderLeagueErrors(created.errors)
-            // let nameInput = document.querySelector("#league_name").parentElement
-            // let formatInput = document.querySelector("#league_format").parentElement
-            // let startInput = document.querySelector("#start_date").parentElement
-            // let endInput = document.querySelector("#end_date").parentElement
 
-            // nameInput.insertAdjacentHTML("beforeend",`<small>${created.errors.league_name || ""}</small>`)
-            // formatInput.insertAdjacentHTML("beforeend",`<small>${created.errors.league_format || ""}</small>`)
-            // startInput.insertAdjacentHTML("beforeend",`<small>${created.errors.start_date || ""}</small>`)
-            // endInput.insertAdjacentHTML("beforeend",`<small>${created.errors.end_date || ""}</small>`)
          } else {
-         const alertElement = document.querySelector(".alert")
-         if (alertElement) alertElement.remove()
-         form.parentNode.removeChild(form)
+            if (alertElement) alertElement.remove()
+            if (successElement) successElement.remove()
+            form.parentNode.removeChild(form)
 
-         let leagueRow = document.querySelector("#league-rows")
+            let successAlert = `
+               <div class="alert alert-success" role="alert">
+                  League successfully created
+               </div>
+            `
 
-         let l = new League(created)
-         leagueRow.innerHTML = ""
-         leagueRow.innerHTML += l.renderLeague()
+            container.insertAdjacentHTML("afterbegin", successAlert)
+
+            let leagueRow = document.querySelector("#league-rows")
+
+            let l = new League(created)
+            leagueRow.innerHTML = ""
+            leagueRow.innerHTML += l.renderLeague()
+
       }})
    }
 
@@ -427,5 +431,5 @@ class League{
          return "Unkown"
       }
    }
-
+   
 }
