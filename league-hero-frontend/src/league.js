@@ -145,11 +145,15 @@ class League{
       button.addEventListener("click", () => {
          event.preventDefault()
          this.updateLeague(event.target.dataset.leagueId)
-         button.parentNode.remove()
+         document.documentElement.scrollTop = 0;
+
    })
 }
 
    static updateLeague(leagueId){
+      let alertElement = document.querySelector(".alert-danger")
+      let successElement = document.querySelector(".alert-success")
+
       const allId = League.all.findIndex(league => league.id == leagueId)
       let form = event.target.parentElement
       let formData = {
@@ -171,6 +175,25 @@ class League{
       fetch(`${baseURL}/leagues/${leagueId}`, configObj)
       .then(resp => resp.json())
       .then(created => {
+
+         if (created.errors) {
+            if (alertElement) alertElement.remove()
+            if (successElement) successElement.remove()
+
+            this.renderLeagueErrors(created.errors)
+
+         } else {
+            if (alertElement) alertElement.remove()
+            if (successElement) successElement.remove()
+            form.parentNode.removeChild(form)
+
+            let successAlert = `
+               <div class="alert alert-success" role="alert">
+                  League successfully created
+               </div>
+            `
+
+            container.insertAdjacentHTML("afterbegin", successAlert)
          let leagueRow = document.querySelector("#league-rows")
          
          let l = new League(created)
@@ -186,7 +209,7 @@ class League{
             start_date: form[2].value,
             end_date: form[3].value 
          }
-      })
+      }})
    }
 
    static deleteLeague(leagueId){
@@ -329,6 +352,7 @@ class League{
       form.addEventListener("submit", () => {
          event.preventDefault()
          this.createLeague()
+         document.documentElement.scrollTop = 0;
       })
    }
 
@@ -388,7 +412,7 @@ class League{
    static renderLeagueErrors(errors){
       let errorAlert = `
          <div class="alert alert-danger" role="alert">
-            <h5 class="alert-heading">Errors occured while creating your league:</h5>
+            <h5 class="alert-heading">Errors occured:</h5>
          </div>
       `
       container.insertAdjacentHTML("afterbegin", errorAlert)
@@ -431,5 +455,5 @@ class League{
          return "Unkown"
       }
    }
-   
+
 }
