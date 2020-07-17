@@ -35,18 +35,7 @@ class League{
          container.innerHTML = ""
          this.setupLeaguePage()
          this.actionRow.innerHTML =""
-         // let actionRow = document.createElement("div")
-         // let leagueRow = document.createElement("div")
-         
-         // actionRow.id = "action-row"
-         // actionRow.className = "row"
-         
-         // leagueRow.id = "league-rows"
-         // leagueRow.classList.add("row","justify-content-center")
-         // leagueRow.innerHTML = ""
-         
-         // container.appendChild(actionRow)
-         // container.appendChild(leagueRow)         
+
          let l = new League(leagues)
          this.leagueRow.innerHTML += l.renderLeague()
          
@@ -90,8 +79,7 @@ class League{
       let button = document.querySelector("#add-league")
       button.addEventListener("click", () => {
          event.preventDefault()
-         if (document.querySelector("form")){
-         } else {
+         if (!document.querySelector("form")){
             event.target.parentElement.insertAdjacentHTML("beforeend",(this.newLeagueForm()))
             this.createLeagueListener()
          }
