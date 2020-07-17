@@ -1,4 +1,7 @@
+
 class League{
+   static actionRow = document.createElement("div")
+   static leagueRow = document.createElement("div")
    static all = []
    static months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"]
    
@@ -15,25 +18,26 @@ class League{
       fetch(`${baseURL}/leagues`)
       .then (resp =>  resp.json())
       .then (leagues => {
-         let actionRow = document.createElement("div")
-         let leagueRow = document.createElement("div")
+         this.setupLeaguePage()
+         // let actionRow = document.createElement("div")
+         // let leagueRow = document.createElement("div")
+
+         // actionRow.id = "action-row"
+         // actionRow.className = "row"
          
-         actionRow.id = "action-row"
-         actionRow.className = "row"
+         // leagueRow.id = "league-rows"
+         // leagueRow.classList.add("row","justify-content-center")
+         // leagueRow.innerHTML = ""
          
-         leagueRow.id = "league-rows"
-         leagueRow.classList.add("row","justify-content-center")
-         leagueRow.innerHTML = ""
-         
-         container.appendChild(actionRow)
-         container.appendChild(leagueRow)
-         
-         actionRow.innerHTML += this.newLeagueButton()
-         this.newLeagueListener()
+         // container.appendChild(actionRow)
+         // container.appendChild(leagueRow)
+
+         // actionRow.innerHTML += this.newLeagueButton()
+         // this.newLeagueListener()
          
          leagues.forEach(league => {
             let l = new League(league)
-            leagueRow.innerHTML += l.renderLeagueShort()
+            this.leagueRow.innerHTML += l.renderLeagueShort()
          })
          
          this.addListeners()
@@ -57,8 +61,7 @@ class League{
          leagueRow.innerHTML = ""
          
          container.appendChild(actionRow)
-         container.appendChild(leagueRow)
-         
+         container.appendChild(leagueRow)         
          let l = new League(leagues)
          leagueRow.innerHTML += l.renderLeague()
          
@@ -449,9 +452,9 @@ class League{
       const start = new Date(this.start_date)
       const end = new Date(this.end_date)
       const currentDay = new Date(today)
-      if (currentDay < (start && end)){
+      if ((currentDay < start) && (currentDay < end)){
          return "Upcoming"
-      } else if ((currentDay === start) || ((currentDay > start) && (currentDay < end))) {
+      } else if ((currentDay === start) || ((currentDay >= start) && (currentDay < end))) {
          return "In Progress"
       } else if ((end < currentDay)){
          return "Finished"
@@ -469,5 +472,20 @@ class League{
       let successElement = document.querySelector(".alert-success")
       if (alertElement) alertElement.remove()
       if (successElement) successElement.remove()
+   }
+
+   static setupLeaguePage(){
+      this.actionRow.id = "action-row"
+      this.actionRow.className = "row"
+      
+      this.leagueRow.id = "league-rows"
+      this.leagueRow.classList.add("row","justify-content-center")
+      this.leagueRow.innerHTML = ""
+      
+      container.appendChild(this.actionRow)
+      container.appendChild(this.leagueRow)
+
+      this.actionRow.innerHTML = this.newLeagueButton()
+      this.newLeagueListener()
    }
 }

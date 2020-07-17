@@ -5,6 +5,7 @@ const tomorrow = `${date.getFullYear()}-0${date.getMonth()+1}-${date.getDate()+1
 const nav = document.querySelector("nav")
 const container = document.querySelector(".container-fluid")
 
+
 document.addEventListener("DOMContentLoaded",()=>{
    nav.addEventListener("click",() => {navigateTo()})
    League.getLeagues()
