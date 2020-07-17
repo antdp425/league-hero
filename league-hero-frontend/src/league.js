@@ -158,6 +158,7 @@ class League{
             `
             
             container.insertAdjacentHTML("afterbegin", successAlert)
+            this.setTimeoutOnAlert("success")
             
             let leagueRow = document.querySelector("#league-rows")
             
@@ -256,6 +257,8 @@ class League{
             `
 
             container.insertAdjacentHTML("afterbegin", successAlert)
+            this.setTimeoutOnAlert("success")
+
             let leagueRow = document.querySelector("#league-rows")
             
             let l = new League(created)
@@ -299,6 +302,7 @@ class League{
          `
          container.innerHTML = ""
          container.insertAdjacentHTML("afterbegin", deleteAlert)
+         this.setTimeoutOnAlert("danger")
          this.getLeagues()
       })
    }
@@ -454,6 +458,10 @@ class League{
       } else {
          return "Unkown"
       }
+   }
+
+   static setTimeoutOnAlert(alert){
+      setTimeout(() => {document.querySelector(`.alert-${alert.toLowerCase()}`).remove()}, 5000);
    }
 
    static removeAlerts(){
