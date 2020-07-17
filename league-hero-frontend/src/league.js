@@ -76,7 +76,8 @@ class League{
    static addListeners(){
       let leagues = document.querySelector("#league-rows")
       leagues.addEventListener("click",()=>{      
-         if (!!(event.target.dataset.leagueId)){   
+         if (!!(event.target.dataset.leagueId)){
+            event.stopPropagation()
             let leagueId = event.target.dataset.leagueId
             this.getLeague(leagueId)
          }
@@ -96,10 +97,10 @@ class League{
                   this.updateLeagueListener()
                }
                break;
-               case event.target.dataset.action === "delete":
-                  event.stopPropagation()
-                  this.deleteLeague(leagueId)
-                  break;
+            case event.target.dataset.action === "delete":
+               event.stopPropagation()
+               this.deleteLeague(leagueId)
+               break;
                }
             })
          }
@@ -127,8 +128,6 @@ class League{
 
    static createLeague(){
       let form = event.target
-      let alertElement = document.querySelector(".alert-danger")
-      let successElement = document.querySelector(".alert-success")
       let actionRow = document.querySelector("#action-row")
       
       let formData = {
@@ -152,14 +151,11 @@ class League{
       .then(created => {
 
          if (created.errors) {
-            if (alertElement) alertElement.remove()
-            if (successElement) successElement.remove()
-
+            this.removeAlerts()
             this.renderLeagueErrors(created.errors)
 
          } else {
-            if (alertElement) alertElement.remove()
-            if (successElement) successElement.remove()
+            this.removeAlerts()
             form.parentNode.removeChild(form)
 
             let successAlert = `
@@ -230,9 +226,6 @@ class League{
 }
 
    static updateLeague(leagueId){
-      let alertElement = document.querySelector(".alert-danger")
-      let successElement = document.querySelector(".alert-success")
-
       const allId = League.all.findIndex(league => league.id == leagueId)
 
       let form = event.target.parentElement
@@ -255,16 +248,12 @@ class League{
       fetch(`${baseURL}/leagues/${leagueId}`, configObj)
       .then(resp => resp.json())
       .then(created => {
-
          if (created.errors) {
-            if (alertElement) alertElement.remove()
-            if (successElement) successElement.remove()
-
+            this.removeAlerts()
             this.renderLeagueErrors(created.errors)
 
          } else {
-            if (alertElement) alertElement.remove()
-            if (successElement) successElement.remove()
+            this.removeAlerts()
             form.parentNode.removeChild(form)
 
             let successAlert = `
@@ -305,22 +294,19 @@ class League{
 
       fetch(`${baseURL}/leagues/${leagueId}`, configObj)
       .then(()=>{
-         this.getLeagues()
          el.remove()
          League.all.splice((League.all.findIndex(league => league.id == leagueId)),1)
-
-         let alertElement = document.querySelector(".alert-danger")
-         let successElement = document.querySelector(".alert-success")
-         if (alertElement) alertElement.remove()
-         if (successElement) successElement.remove()
-
+         
+         this.removeAlerts()
+         
          let deleteAlert = `
          <div class="alert alert-danger text-center" role="alert">
-            League deleted ✅
+         League deleted ✅
          </div>
          `
-   
+         container.innerHTML = ""
          container.insertAdjacentHTML("afterbegin", deleteAlert)
+         this.getLeagues()
       })
    }
 
@@ -449,9 +435,7 @@ class League{
    }
 
    static store(){
-      League.all.findIndex(league => league.id === this.id) === -1 ?
-         League.all.push(this) : 
-            false
+      if (League.all.findIndex(league => league.id === this.id) === -1) League.all.push(this)   
    }
 
    getMonth(league_date){
@@ -479,4 +463,10 @@ class League{
       }
    }
 
+   static removeAlerts(){
+      let alertElement = document.querySelector(".alert-danger")
+      let successElement = document.querySelector(".alert-success")
+      if (alertElement) alertElement.remove()
+      if (successElement) successElement.remove()
+   }
 }

@@ -154,14 +154,11 @@ class Team{
       .then(resp => resp.json())
       .then(created => {
          if (created.errors){
-            if (alertElement) alertElement.remove()
-            if (successElement) successElement.remove()
-
+            this.removeAlerts()
             this.renderTeamErrors(created.errors)
 
          } else {
-            if (alertElement) alertElement.remove()
-            if (successElement) successElement.remove()
+            this.removeAlerts()
             form.parentNode.removeChild(form)
 
             let successAlert = `
@@ -237,9 +234,6 @@ class Team{
 }
 
    static updateTeam(teamId){
-      let alertElement = document.querySelector(".alert-danger")
-      let successElement = document.querySelector(".alert-success")
-      
       let form = event.target.parentElement
       let formData = {
          name: form[0].value,
@@ -260,13 +254,10 @@ class Team{
       .then(resp => resp.json())
       .then(created => {
          if (created.errors) {
-            if (alertElement) alertElement.remove()
-            if (successElement) successElement.remove()
-
+            this.removeAlerts()
             this.renderTeamErrors(created.errors)
          } else {
-            if (alertElement) alertElement.remove()
-            if (successElement) successElement.remove()
+            this.removeAlerts()
             form.parentNode.removeChild(form)
 
 
@@ -299,21 +290,17 @@ class Team{
       
       fetch(`${baseURL}/teams/${teamId}`, configObj)
       .then(()=>{
-         this.getTeams()
          el.remove()
-
-         let alertElement = document.querySelector(".alert-danger")
-         let successElement = document.querySelector(".alert-success")
-         if (alertElement) alertElement.remove()
-         if (successElement) successElement.remove()
+         this.removeAlerts()
 
          let deleteAlert = `
          <div class="alert alert-danger text-center" role="alert">
             Team deleted ✅
          </div>
          `
-   
+         container.innerHTML = ""
          container.insertAdjacentHTML("afterbegin", deleteAlert)
+         this.getTeams()
       })
    }
 
@@ -389,6 +376,13 @@ class Team{
          `
       })
 
+   }
+
+   static removeAlerts(){
+      let alertElement = document.querySelector(".alert-danger")
+      let successElement = document.querySelector(".alert-success")
+      if (alertElement) alertElement.remove()
+      if (successElement) successElement.remove()
    }
 
    // static store(){
