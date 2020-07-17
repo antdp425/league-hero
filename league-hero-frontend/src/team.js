@@ -130,8 +130,6 @@ class Team{
    
    static createTeam(){
       let form = event.target
-      let alertElement = document.querySelector(".alert-danger")
-      let successElement = document.querySelector(".alert-success")
       let actionRow = document.querySelector("#action-row")
       
       let formData = {
@@ -168,6 +166,7 @@ class Team{
             `
 
             container.insertAdjacentHTML("afterbegin", successAlert)
+            this.setTimeoutOnAlert("success")
 
             let teamRow = document.querySelector("#team-rows")
             
@@ -268,6 +267,7 @@ class Team{
             `
 
             container.insertAdjacentHTML("afterbegin", successAlert)
+            this.setTimeoutOnAlert("success")
 
             let teamRow = document.querySelector("#team-rows")
             
@@ -300,6 +300,7 @@ class Team{
          `
          container.innerHTML = ""
          container.insertAdjacentHTML("afterbegin", deleteAlert)
+         this.setTimeoutOnAlert("danger")
          this.getTeams()
       })
    }
@@ -376,6 +377,10 @@ class Team{
          `
       })
 
+   }
+
+   static setTimeoutOnAlert(alert){
+      setTimeout(() => {document.querySelector(`.alert-${alert.toLowerCase()}`).remove()}, 5000);
    }
 
    static removeAlerts(){

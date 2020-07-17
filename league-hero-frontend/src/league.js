@@ -62,16 +62,9 @@ class League{
          let l = new League(leagues)
          leagueRow.innerHTML += l.renderLeague()
          
-         this.addActionListeners()
-         
-         // l.teams.forEach(team => {
-            //    let t = new Team(team)
-            //    leagueRow.insertAdjacentHTML("afterend", t.renderTeamShort())
-            // }) 
-            
-            
-         })
-      }
+         this.addActionListeners() 
+      })
+   }
 
    static addListeners(){
       let leagues = document.querySelector("#league-rows")
@@ -189,7 +182,7 @@ class League{
 
       return `      
          <form>
-            <div class="form-group>
+            <div class="form-group">
                <label for="leage_name">League Name:</label>
                <input type="text" class="form-control" name="league_name" id="league_name" value="${leagueData.name}">
             </div>
@@ -223,7 +216,7 @@ class League{
          this.updateLeague(event.target.dataset.leagueId)
          document.documentElement.scrollTop = 0;
    })
-}
+   }
 
    static updateLeague(leagueId){
       const allId = League.all.findIndex(league => league.id == leagueId)
