@@ -18,6 +18,7 @@ function navigateTo(){
          League.getLeagues()
          break;
       case (event.target.id === "teams-nav"):
+         container.innerHTML = ""
          Team.getTeams()
          break;
    }

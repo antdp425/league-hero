@@ -14,7 +14,6 @@ class Team{
       fetch(`${baseURL}/teams`)
       .then (resp =>  resp.json())
       .then (teams => {         
-         container.innerHTML = ""
          let actionRow = document.createElement("div")
          let teamRow = document.createElement("div")
 
@@ -167,7 +166,7 @@ class Team{
 
             let successAlert = `
             <div class="alert alert-success text-center" role="alert">
-               Team successfully created
+               Team created 👍
             </div>
             `
 
@@ -197,7 +196,6 @@ class Team{
                break;
             case event.target.dataset.action === "delete":
                Team.deleteTeam(teamId)
-               console.log("Its a delete")
                break;
          }
       })
@@ -274,7 +272,7 @@ class Team{
 
             let successAlert = `
                <div class="alert alert-success text-center" role="alert">
-                  Team Updated
+                  Team updated 👍
                </div>
             `
 
@@ -303,6 +301,19 @@ class Team{
       .then(()=>{
          this.getTeams()
          el.remove()
+
+         let alertElement = document.querySelector(".alert-danger")
+         let successElement = document.querySelector(".alert-success")
+         if (alertElement) alertElement.remove()
+         if (successElement) successElement.remove()
+
+         let deleteAlert = `
+         <div class="alert alert-danger text-center" role="alert">
+            Team deleted ✅
+         </div>
+         `
+   
+         container.insertAdjacentHTML("afterbegin", deleteAlert)
       })
    }
 
