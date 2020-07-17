@@ -19,27 +19,10 @@ class League{
       .then (resp =>  resp.json())
       .then (leagues => {
          this.setupLeaguePage()
-         // let actionRow = document.createElement("div")
-         // let leagueRow = document.createElement("div")
-
-         // actionRow.id = "action-row"
-         // actionRow.className = "row"
-         
-         // leagueRow.id = "league-rows"
-         // leagueRow.classList.add("row","justify-content-center")
-         // leagueRow.innerHTML = ""
-         
-         // container.appendChild(actionRow)
-         // container.appendChild(leagueRow)
-
-         // actionRow.innerHTML += this.newLeagueButton()
-         // this.newLeagueListener()
-         
          leagues.forEach(league => {
             let l = new League(league)
             this.leagueRow.innerHTML += l.renderLeagueShort()
          })
-         
          this.addListeners()
          
       })
@@ -50,20 +33,22 @@ class League{
       .then (resp =>  resp.json())
       .then (leagues => {   
          container.innerHTML = ""
-         let actionRow = document.createElement("div")
-         let leagueRow = document.createElement("div")
+         this.setupLeaguePage()
+         this.actionRow.innerHTML =""
+         // let actionRow = document.createElement("div")
+         // let leagueRow = document.createElement("div")
          
-         actionRow.id = "action-row"
-         actionRow.className = "row"
+         // actionRow.id = "action-row"
+         // actionRow.className = "row"
          
-         leagueRow.id = "league-rows"
-         leagueRow.classList.add("row","justify-content-center")
-         leagueRow.innerHTML = ""
+         // leagueRow.id = "league-rows"
+         // leagueRow.classList.add("row","justify-content-center")
+         // leagueRow.innerHTML = ""
          
-         container.appendChild(actionRow)
-         container.appendChild(leagueRow)         
+         // container.appendChild(actionRow)
+         // container.appendChild(leagueRow)         
          let l = new League(leagues)
-         leagueRow.innerHTML += l.renderLeague()
+         this.leagueRow.innerHTML += l.renderLeague()
          
          this.addActionListeners() 
       })
@@ -475,6 +460,7 @@ class League{
    }
 
    static setupLeaguePage(){
+      this.actionRow.innerHTML = ""
       this.actionRow.id = "action-row"
       this.actionRow.className = "row"
       
