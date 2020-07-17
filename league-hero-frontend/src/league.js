@@ -15,7 +15,6 @@ class League{
       fetch(`${baseURL}/leagues`)
       .then (resp =>  resp.json())
       .then (leagues => {
-         container.innerHTML = ""
          let actionRow = document.createElement("div")
          let leagueRow = document.createElement("div")
          
@@ -98,6 +97,7 @@ class League{
                }
                break;
                case event.target.dataset.action === "delete":
+                  event.stopPropagation()
                   this.deleteLeague(leagueId)
                   break;
                }
@@ -163,8 +163,8 @@ class League{
             form.parentNode.removeChild(form)
 
             let successAlert = `
-               <div class="alert alert-success" role="alert">
-                  League created
+               <div class="alert alert-success text-center" role="alert">
+                  League created 👍
                </div>
             `
             
@@ -268,8 +268,8 @@ class League{
             form.parentNode.removeChild(form)
 
             let successAlert = `
-               <div class="alert alert-success" role="alert">
-                  League Updated
+               <div class="alert alert-success text-center" role="alert">
+                  League updated 👍
                </div>
             `
 
@@ -308,6 +308,19 @@ class League{
          this.getLeagues()
          el.remove()
          League.all.splice((League.all.findIndex(league => league.id == leagueId)),1)
+
+         let alertElement = document.querySelector(".alert-danger")
+         let successElement = document.querySelector(".alert-success")
+         if (alertElement) alertElement.remove()
+         if (successElement) successElement.remove()
+
+         let deleteAlert = `
+         <div class="alert alert-danger text-center" role="alert">
+            League deleted ✅
+         </div>
+         `
+   
+         container.insertAdjacentHTML("afterbegin", deleteAlert)
       })
    }
 

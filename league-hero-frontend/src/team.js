@@ -166,7 +166,7 @@ class Team{
             form.parentNode.removeChild(form)
 
             let successAlert = `
-            <div class="alert alert-success" role="alert">
+            <div class="alert alert-success text-center" role="alert">
                Team successfully created
             </div>
             `
@@ -273,7 +273,7 @@ class Team{
 
 
             let successAlert = `
-               <div class="alert alert-success" role="alert">
+               <div class="alert alert-success text-center" role="alert">
                   Team Updated
                </div>
             `
