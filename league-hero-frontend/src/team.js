@@ -339,19 +339,19 @@ class Team{
 
    renderTeam(){
       return `
-      <div class="col">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-xl-8">
             <div class="card bg-light mb-3">
-               <div class="card-header align-middle">
+               <h2 class="card-header align-middle">
                <a href="#" data-team-id="${this.id}" id="team_name">${this.name}</a>
                   <span>
                      <a href="#" data-league-id="${this.league_id}" class=" badge badge-dark float-right">${this.league}</a>
                   </span>
-               </div>
+               </h2>
                   <div class="card-body">
                   <div class="card-text" id="team_email"><i class="fas fa-envelope"></i>${this.email}</div>
                   <div class="card-text" id="team_phone"><i class="fas fa-mobile"></i>${this.phone}</div>
                   <br>
-                  <div class="action-buttons">
+                  <div class="action-buttons text-center">
                      <button class="btn btn-info" data-team-id="${this.id}" data-action="edit">Edit Team</button>
                      <button class="btn btn-danger" data-team-id="${this.id}" data-action="delete">Delete Team</button>
                   </div>
