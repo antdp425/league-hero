@@ -30,21 +30,10 @@ class Team{
       .then (resp =>  resp.json())
       .then (teams => {         
          container.innerHTML = ""
-         let actionRow = document.createElement("div")
-         let teamRow = document.createElement("div")
-         
-         actionRow.id = "action-row"
-         actionRow.className = "row"
-         
-         teamRow.id = "team-rows"
-         teamRow.classList.add("row","justify-content-center")
-         teamRow.innerHTML = ""
-         
-         container.appendChild(actionRow)
-         container.appendChild(teamRow)
-         
+         this.setupTeamPage()
+
          let t = new Team(teams)
-         teamRow.innerHTML += t.renderTeam()
+         this.teamRow.innerHTML += t.renderTeam()
          
          this.addListeners()
          this.addActionListeners()
