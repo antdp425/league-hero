@@ -31,6 +31,7 @@ class Team{
       .then (teams => {         
          container.innerHTML = ""
          this.setupTeamPage()
+         this.actionRow.innerHTML = ""
 
          let t = new Team(teams)
          this.teamRow.innerHTML += t.renderTeam()
@@ -52,8 +53,7 @@ class Team{
       let button = document.querySelector("#add-team")
       button.addEventListener("click", () => {
          event.preventDefault()
-         if (document.querySelector("form")){
-         } else {
+         if (!document.querySelector("form")){
             event.target.parentElement.insertAdjacentHTML("beforeend",(this.newTeamForm()))
             this.createLeagueOptions()
             this.createTeamListener()
@@ -140,7 +140,7 @@ class Team{
             `
 
             container.insertAdjacentHTML("afterbegin", successAlert)
-            this.setTimeoutOnAlert("success")
+            this.clearAlert("success")
 
             let teamRow = document.querySelector("#team-rows")
             
@@ -199,15 +199,16 @@ class Team{
 
    static updateTeamListener(){
       let button = document.querySelector("#update")
-      button.addEventListener("click", () => {
+      let form = button.parentElement
+      form.addEventListener("submit", () => {
          event.preventDefault()
-         this.updateTeam(event.target.dataset.teamId)
+         this.updateTeam(button.dataset.teamId)
          document.documentElement.scrollTop = 0;
    })
    }
 
    static updateTeam(teamId){
-      let form = event.target.parentElement
+      let form = event.target
       let formData = {
          name: form[0].value,
          email: form[1].value,
@@ -241,7 +242,7 @@ class Team{
             `
 
             container.insertAdjacentHTML("afterbegin", successAlert)
-            this.setTimeoutOnAlert("success")
+            this.clearAlert("success")
 
             let teamRow = document.querySelector("#team-rows")
             
@@ -274,7 +275,7 @@ class Team{
          `
          container.innerHTML = ""
          container.insertAdjacentHTML("afterbegin", deleteAlert)
-         this.setTimeoutOnAlert("danger")
+         this.clearAlert("danger")
          this.getTeams()
       })
    }
@@ -353,7 +354,7 @@ class Team{
 
    }
 
-   static setTimeoutOnAlert(alert){
+   static clearAlert(alert){
       setTimeout(() => {document.querySelector(`.alert-${alert.toLowerCase()}`).remove()}, 5000);
    }
 
