@@ -188,9 +188,10 @@ class League{
 
    static updateLeagueListener(){
       let button = document.querySelector("#update")
-      button.addEventListener("click", () => {
+      let form = button.parentElement
+      form.addEventListener("submit", () => {
          event.preventDefault()
-         this.updateLeague(event.target.dataset.leagueId)
+         this.updateLeague(button.dataset.leagueId)
          document.documentElement.scrollTop = 0;
    })
    }
@@ -198,7 +199,7 @@ class League{
    static updateLeague(leagueId){
       const allId = League.all.findIndex(league => league.id == leagueId)
 
-      let form = event.target.parentElement
+      let form = event.target
       let formData = {
          name: form[0].value,
          league_format: form[1].value,

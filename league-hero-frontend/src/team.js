@@ -204,7 +204,7 @@ class Team{
          event.preventDefault()
          this.updateTeam(button.dataset.teamId)
          document.documentElement.scrollTop = 0;
-   })
+      })
    }
 
    static updateTeam(teamId){
