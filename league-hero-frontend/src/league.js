@@ -34,7 +34,7 @@ class League{
       .then (leagues => {   
          container.innerHTML = ""
          this.setupLeaguePage()
-         this.actionRow.innerHTML =""
+         this.actionRow.innerHTML = ""
 
          let l = new League(leagues)
          this.leagueRow.innerHTML += l.renderLeague()
@@ -134,7 +134,7 @@ class League{
             `
             
             container.insertAdjacentHTML("afterbegin", successAlert)
-            this.setTimeoutOnAlert("success")
+            this.clearAlert("success")
             
             let leagueRow = document.querySelector("#league-rows")
             
@@ -233,7 +233,7 @@ class League{
             `
 
             container.insertAdjacentHTML("afterbegin", successAlert)
-            this.setTimeoutOnAlert("success")
+            this.clearAlert("success")
 
             let leagueRow = document.querySelector("#league-rows")
             
@@ -278,7 +278,7 @@ class League{
          `
          container.innerHTML = ""
          container.insertAdjacentHTML("afterbegin", deleteAlert)
-         this.setTimeoutOnAlert("danger")
+         this.clearAlert("danger")
          this.getLeagues()
       })
    }
@@ -436,7 +436,7 @@ class League{
       }
    }
 
-   static setTimeoutOnAlert(alert){
+   static clearAlert(alert){
       setTimeout(() => {document.querySelector(`.alert-${alert.toLowerCase()}`).remove()}, 5000);
    }
 

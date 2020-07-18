@@ -1,4 +1,6 @@
 class Team{
+   static actionRow = document.createElement("div")
+   static teamRow = document.createElement("div")
    constructor(teamInfo){
       this.id = teamInfo.id
       this.name = teamInfo.name
@@ -13,30 +15,13 @@ class Team{
    static getTeams(){
       fetch(`${baseURL}/teams`)
       .then (resp =>  resp.json())
-      .then (teams => {         
-         let actionRow = document.createElement("div")
-         let teamRow = document.createElement("div")
-
-         actionRow.id = "action-row"
-         actionRow.className = "row"
-         
-         teamRow.id = "team-rows"
-         teamRow.classList.add("row","justify-content-center")
-         teamRow.innerHTML = ""
-         
-         container.appendChild(actionRow)
-         container.appendChild(teamRow)
-
-         actionRow.innerHTML += this.newTeamButton()
-         this.newTeamListener()
-
+      .then (teams => {
+         this.setupTeamPage()
          teams.forEach(team => {
             let t = new Team(team)
-            teamRow.innerHTML += t.renderTeamShort()
+            this.teamRow.innerHTML += t.renderTeamShort()
          })
-
          this.addListeners()
-
       })
    }
 
@@ -230,7 +215,7 @@ class Team{
          this.updateTeam(event.target.dataset.teamId)
          document.documentElement.scrollTop = 0;
    })
-}
+   }
 
    static updateTeam(teamId){
       let form = event.target.parentElement
@@ -388,6 +373,21 @@ class Team{
       let successElement = document.querySelector(".alert-success")
       if (alertElement) alertElement.remove()
       if (successElement) successElement.remove()
+   }
+
+   static setupTeamPage(){
+         this.actionRow.id = "action-row"
+         this.actionRow.className = "row"
+         
+         this.teamRow.id = "team-rows"
+         this.teamRow.classList.add("row","justify-content-center")
+         this.teamRow.innerHTML = ""
+         
+         container.appendChild(this.actionRow)
+         container.appendChild(this.teamRow)
+         
+         this.actionRow.innerHTML = this.newTeamButton()
+         this.newTeamListener()
    }
 
    // static store(){
