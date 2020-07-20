@@ -25,6 +25,25 @@ class Team{
       })
    }
 
+   static addListeners(){
+      let teams = document.querySelector("#team-rows")
+      teams.addEventListener("click",()=>{
+         switch (true) {
+            case !!(event.target.dataset.teamId) && (event.target.tagName == "A"):
+               event.stopImmediatePropagation()
+               let leagueId = event.target.nextElementSibling.firstElementChild.dataset.leagueId
+               let teamId = event.target.dataset.teamId
+               this.getTeam(leagueId, teamId)
+               break;
+            case !!(event.target.dataset.leagueId) && (event.target.tagName == "A"):
+               event.stopImmediatePropagation()
+               League.getLeague(event.target.dataset.leagueId)
+               console.log("Its a league")
+               break;
+         }
+      })
+   }
+
    static getTeam(leagueId, teamId){
       fetch(`${baseURL}/leagues/${leagueId}/teams/${teamId}`)
       .then (resp =>  resp.json())
@@ -40,7 +59,24 @@ class Team{
          this.addActionListeners()
          
       })
+   }
 
+   static addActionListeners(){
+      let actions = document.querySelector(".action-buttons")
+      actions.addEventListener("click",()=>{
+         let teamId = event.target.dataset.teamId
+         switch (true) {
+            case event.target.dataset.action === "edit":
+               if (!document.querySelector("form")){    
+                  event.target.parentElement.parentElement.parentElement.parentElement.parentElement.insertAdjacentHTML("beforeend",this.editTeamForm())
+                  this.updateTeamListener()
+               }
+               break;
+            case event.target.dataset.action === "delete":
+               Team.deleteTeam(teamId)
+               break;
+         }
+      })
    }
 
    static newTeamButton(){
@@ -153,24 +189,6 @@ class Team{
       }})
    }
 
-   static addActionListeners(){
-      let actions = document.querySelector(".action-buttons")
-      actions.addEventListener("click",()=>{
-         let teamId = event.target.dataset.teamId
-         switch (true) {
-            case event.target.dataset.action === "edit":
-               if (document.querySelector("form")){                  
-               } else {
-               event.target.parentElement.parentElement.parentElement.parentElement.parentElement.insertAdjacentHTML("beforeend",this.editTeamForm())
-               this.updateTeamListener()}
-               break;
-            case event.target.dataset.action === "delete":
-               Team.deleteTeam(teamId)
-               break;
-         }
-      })
-   }
-
    static editTeamForm(){
       let teamData = {
          id: document.querySelector("[data-team-id]").dataset.teamId,
@@ -226,10 +244,10 @@ class Team{
       
       fetch(`${baseURL}/teams/${teamId}`, configObj)
       .then(resp => resp.json())
-      .then(created => {
-         if (created.errors) {
+      .then(updated => {
+         if (updated.errors) {
             this.removeAlerts()
-            this.renderTeamErrors(created.errors)
+            this.renderTeamErrors(updated.errors)
          } else {
             this.removeAlerts()
             form.parentNode.removeChild(form)
@@ -246,7 +264,7 @@ class Team{
 
             let teamRow = document.querySelector("#team-rows")
             
-            let t = new Team(created)
+            let t = new Team(updated)
             teamRow.innerHTML = ""
             teamRow.innerHTML += t.renderTeam()
             this.addActionListeners()
@@ -279,24 +297,6 @@ class Team{
          this.getTeams()
       })
    }
-
-   static addListeners(){
-      let teams = document.querySelector("#team-rows")
-      teams.addEventListener("click",()=>{
-         switch (true) {
-            case !!(event.target.dataset.teamId) && (event.target.tagName == "A"):
-               let leagueId = event.target.nextElementSibling.firstElementChild.dataset.leagueId
-               let teamId = event.target.dataset.teamId
-               this.getTeam(leagueId, teamId)
-               break;
-            case !!(event.target.dataset.leagueId) && (event.target.tagName == "A"):
-               League.getLeague(event.target.dataset.leagueId)
-               console.log("Its a league")
-               break;
-         }
-      })
-   }
-
    
    renderTeamShort(){
       return `
@@ -324,6 +324,7 @@ class Team{
                   </span>
                </h2>
                   <div class="card-body">
+                  <div class="card-text"> Contact Info:</div>
                   <div class="card-text" id="team_email"><i class="fas fa-envelope"></i>${this.email}</div>
                   <div class="card-text" id="team_phone"><i class="fas fa-mobile"></i>${this.phone}</div>
                   <br>
@@ -379,10 +380,4 @@ class Team{
          this.actionRow.innerHTML = this.newTeamButton()
          this.newTeamListener()
    }
-
-   // static store(){
-   //    Team.leagues.findIndex(league => league.league_id === this.league_id) === -1 ?
-   //    Team.leagues.push({league_id: this.league_id, league_name: this.league}) : 
-   //    false
-   // }
 }

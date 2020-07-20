@@ -31,15 +31,15 @@ class League{
    static getLeague(leagueId){
       fetch(`${baseURL}/leagues/${leagueId}`)
       .then (resp =>  resp.json())
-      .then (leagues => {   
+      .then (league => {   
          container.innerHTML = ""
          this.setupLeaguePage()
          this.actionRow.innerHTML = ""
 
-         let l = new League(leagues)
+         let l = new League(league)
          this.leagueRow.innerHTML += l.renderLeague()
          
-         this.addActionListeners() 
+         this.addActionListeners()
       })
    }
 
@@ -47,7 +47,7 @@ class League{
       let leagues = document.querySelector("#league-rows")
       leagues.addEventListener("click",()=>{      
          if (!!(event.target.dataset.leagueId)){
-            event.stopPropagation()
+            event.stopImmediatePropagation()
             let leagueId = event.target.dataset.leagueId
             this.getLeague(leagueId)
          }
@@ -60,8 +60,7 @@ class League{
          let leagueId = event.target.dataset.leagueId
          switch (true) {
             case event.target.dataset.action === "edit":
-               if (document.querySelector("form")){
-               } else {
+               if (!document.querySelector("form")){
                   event.stopPropagation()
                   event.target.parentElement.parentElement.parentElement.parentElement.parentElement.insertAdjacentHTML("afterend",this.editLeagueForm())
                   this.updateLeagueListener()
@@ -218,10 +217,10 @@ class League{
       
       fetch(`${baseURL}/leagues/${leagueId}`, configObj)
       .then(resp => resp.json())
-      .then(created => {
-         if (created.errors) {
+      .then(updated => {
+         if (updated.errors) {
             this.removeAlerts()
-            this.renderLeagueErrors(created.errors)
+            this.renderLeagueErrors(updated.errors)
 
          } else {
             this.removeAlerts()
@@ -238,7 +237,7 @@ class League{
 
             let leagueRow = document.querySelector("#league-rows")
             
-            let l = new League(created)
+            let l = new League(updated)
             leagueRow.innerHTML = ""
             leagueRow.innerHTML += l.renderLeague()
 
