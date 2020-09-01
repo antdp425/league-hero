@@ -1,4 +1,4 @@
-const baseURL = "http://localhost:3000"
+const baseURL = "https://league-hero-v1-api.herokuapp.com/"
 const date = new Date
 const today = `${date.getFullYear()}-0${date.getMonth()+1}-${date.getDate()}`
 const tomorrow = `${date.getFullYear()}-0${date.getMonth()+1}-${date.getDate()+1}`

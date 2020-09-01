@@ -1,4 +1,3 @@
-
 class League{
    static actionRow = document.createElement("div")
    static leagueRow = document.createElement("div")
@@ -192,7 +191,7 @@ class League{
          event.preventDefault()
          this.updateLeague(button.dataset.leagueId)
          document.documentElement.scrollTop = 0;
-   })
+      })
    }
 
    static updateLeague(leagueId){
