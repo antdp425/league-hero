@@ -14,6 +14,7 @@ class League{
    }
 
    static getLeagues(){
+      container.innerHTML = `<div>Loading...</div>`
       fetch(`${baseURL}/leagues`)
       .then (resp =>  resp.json())
       .then (leagues => {

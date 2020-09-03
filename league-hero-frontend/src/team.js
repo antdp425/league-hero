@@ -13,6 +13,7 @@ class Team{
    }
 
    static getTeams(){
+      container.innerHTML = `<div>Loading...</div>`
       fetch(`${baseURL}/teams`)
       .then (resp =>  resp.json())
       .then (teams => {
