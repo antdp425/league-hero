@@ -17,6 +17,7 @@ class Team{
       fetch(`${baseURL}/teams`)
       .then (resp =>  resp.json())
       .then (teams => {
+         container.innerHTML = ""
          this.setupTeamPage()
          teams.forEach(team => {
             let t = new Team(team)
