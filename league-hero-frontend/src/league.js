@@ -14,7 +14,7 @@ class League{
    }
 
    static getLeagues(){
-      this.leagueRow.innerHTML += `<div>Loading...</div>`
+      this.leagueRow.innerHTML = `<div>Loading...</div>`
       fetch(`${baseURL}/leagues`)
       .then (resp =>  resp.json())
       .then (leagues => {
