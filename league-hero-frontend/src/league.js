@@ -14,11 +14,9 @@ class League{
    }
 
    static getLeagues(){
-      container.innerHTML = `<div>Loading...</div>`
       fetch(`${baseURL}/leagues`)
       .then (resp =>  resp.json())
       .then (leagues => {
-         container.innerHTML = ""
          this.setupLeaguePage()
          leagues.forEach(league => {
             let l = new League(league)

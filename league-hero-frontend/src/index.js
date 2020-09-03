@@ -8,6 +8,7 @@ const container = document.querySelector(".container-fluid")
 
 document.addEventListener("DOMContentLoaded",()=>{
    nav.addEventListener("click", navigateTo)
+   this.leagueRow.innerHTML = `<div>Loading...</div>`
    League.getLeagues()
 })
 
